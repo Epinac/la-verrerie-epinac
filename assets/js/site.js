@@ -1,4 +1,4 @@
-/* La Verrerie — Site JS
+/* Domaine de la Verrerie — Site JS
    Vanilla, durable. Une seule source de vérité pour le comportement du site. */
 (function () {
     'use strict';
