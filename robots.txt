@@ -3,4 +3,4 @@ Allow: /
 Disallow: /v1-archive/
 Disallow: /.npm-cache/
 
-Sitemap: https://laverrerie.fr/sitemap.xml
+Sitemap: https://domainedelaverrerie.fr/sitemap.xml
