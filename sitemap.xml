@@ -58,6 +58,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://domainedelaverrerie.fr/en/weddings/"/>
   </url>
 
+  <!-- ===== TOURNAGES / FILMING & PHOTOSHOOTS ===== -->
+  <url>
+    <loc>https://domainedelaverrerie.fr/tournages/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <!-- ===== SEMINARS / SEMINAIRES ===== -->
   <url>
     <loc>https://domainedelaverrerie.fr/seminaires/</loc>
