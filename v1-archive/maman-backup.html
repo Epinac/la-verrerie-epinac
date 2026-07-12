@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA VERRERIE D'ÉPINAC | Chambres d'Hôtes & Événements de Prestige</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --stone-bg: #f2ede4; /* Beige calcaire plus chaud et texturé */
+            --dark-forest: #1b2620; /* Vert profond pour le contraste */
+            --gold-brass: #a68953; /* Laiton pour le luxe */
+            --glass-sheet: rgba(255, 255, 255, 0.85);
+            --ink: #1a1a1a;
+            --border-soft: rgba(27, 38, 32, 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--stone-bg); color: var(--ink); line-height: 1.7; }
+
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--dark-forest); }
+        p { font-weight: 400; font-size: 0.95rem; color: #333; text-align: justify; }
+        .accent { color: var(--gold-brass); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.4em; font-weight: 600; display: block; margin-bottom: 10px; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 60px; background: var(--glass-sheet);
+            border-bottom: 1px solid var(--border-soft); backdrop-filter: blur(10px);
+        }
+        .logo { font-size: 1.4rem; letter-spacing: 0.4em; font-weight: 600; color: var(--dark-forest); }
+        .nav-links { display: flex; gap: 25px; list-style: none; }
+        .nav-links a { color: var(--dark-forest); text-decoration: none; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 600; }
+
+        /* --- HERO --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://www.terredevins.com/wp-content/uploads/2015/07/mg_0342.jpg') center/cover no-repeat;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+        }
+        .hero h1 { font-size: clamp(3rem, 7vw, 5.5rem); font-style: italic; color: #fff; text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+
+        /* --- RÉSERVATION --- */
+        .booking-panel {
+            max-width: 1200px; margin: -50px auto 100px;
+            background: var(--dark-forest); color: white;
+            display: grid; grid-template-columns: repeat(4, 1fr); padding: 35px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        }
+        .booking-item { border-right: 1px solid rgba(255,255,255,0.1); padding: 0 20px; }
+        .booking-item:last-child { border-right: none; }
+        .booking-item label { display: block; color: var(--gold-brass); font-size: 0.6rem; text-transform: uppercase; margin-bottom: 10px; font-weight: 600; }
+        .booking-item select, .booking-item input { background: transparent; border: none; color: white; font-family: inherit; width: 100%; outline: none; }
+        .btn-book { background: var(--gold-brass); color: white; border: none; text-transform: uppercase; letter-spacing: 0.2em; cursor: pointer; transition: 0.3s; }
+        .btn-book:hover { background: #fff; color: var(--dark-forest); }
+
+        /* --- SECTIONS TEXTURÉES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 100px 40px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 120px; }
+        .img-stack { position: relative; border: 1px solid var(--gold-brass); padding: 15px; background: #fff; }
+        .img-stack img { width: 100%; display: block; }
+
+        /* --- CŒUR DU SITE : CHAMBRES, VIN D'HONNEUR, SÉMINAIRES --- */
+        .service-block { background: #fff; border: 1px solid var(--border-soft); margin-bottom: 30px; display: flex; overflow: hidden; height: 450px; }
+        .service-block:nth-child(even) { flex-direction: row-reverse; }
+        .service-img { width: 50%; height: 100%; }
+        .service-img img { width: 100%; height: 100%; object-fit: cover; }
+        .service-text { width: 50%; padding: 60px; display: flex; flex-direction: column; justify-content: center; }
+        .service-text h3 { font-size: 2rem; margin-bottom: 20px; color: var(--dark-forest); }
+
+        /* --- HISTOIRE (FOND VIGNOBLE) --- */
+        .history-wrap { 
+            background: linear-gradient(rgba(27, 38, 32, 0.9), rgba(27, 38, 32, 0.9)), url('https://img.freepik.com/photos-gratuite/belle-vue-vignoble-dans-collines-verdoyantes-au-coucher-du-soleil_181624-23100.jpg?semt=ais_hybrid&w=740&q=80') center/cover fixed;
+            color: #fff; padding: 120px 0;
+        }
+        .history-wrap h2, .history-wrap h4 { color: var(--gold-brass); }
+        .history-wrap p { color: #ccc; }
+        .history-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 50px; margin-top: 60px; }
+        .history-item { border-left: 1px solid var(--gold-brass); padding-left: 30px; }
+
+        /* --- CARTE --- */
+        .map-frame { height: 450px; background: #ddd; filter: sepia(0.2) contrast(1.1); border-top: 5px solid var(--dark-forest); }
+
+        /* --- FOOTER --- */
+        footer { padding: 100px 60px 40px; background: var(--dark-forest); color: white; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; }
+        .footer-col h5 { color: var(--gold-brass); margin-bottom: 25px; font-size: 0.8rem; letter-spacing: 0.3em; }
+        .footer-links { list-style: none; }
+        .footer-links a { color: #aaa; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: #fff; }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">LA VERRERIE.</div>
+        <ul class="nav-links">
+            <li><a href="#chambres">Chambres d'Hôtes</a></li>
+            <li><a href="#receptions">Réceptions</a></li>
+            <li><a href="#seminaires">Séminaires</a></li>
+            <li><a href="#histoire">Histoire</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <span class="accent" style="color: #fff;">Demeure de Prestige en Bourgogne</span>
+        <h1>L'Héritage &<br>La Renaissance</h1>
+    </section>
+
+    <div class="booking-panel">
+        <div class="booking-item">
+            <label>Votre Expérience</label>
+            <select>
+                <option>Nuit en Chambre d'Hôtes</option>
+                <option>Vin d'Honneur & Mariage</option>
+                <option>Séminaire de Direction</option>
+            </select>
+        </div>
+        <div class="booking-item">
+            <label>Dates</label>
+            <input type="date">
+        </div>
+        <div class="booking-item">
+            <label>Convives</label>
+            <input type="number" placeholder="2">
+        </div>
+        <button class="btn-book">Réserver mon séjour</button>
+    </div>
+
+    <section class="container" id="chambres">
+        <div class="text-center" style="margin-bottom: 60px;">
+            <span class="accent">L'Art de Recevoir</span>
+            <h2>Services de la Demeure</h2>
+        </div>
+
+        <div class="service-block">
+            <div class="service-img">
+                <img src="https://durtepqo099rl.cloudfront.net/P1069/MCHC8qsRkt/Propriete_fin_18e_siecle_a_vendre_Parc_arbore_de_9_000m2_Ideal_Gite_Chambr_9.webp" alt="Chambres d'hôtes">
+            </div>
+            <div class="service-text">
+                <span class="accent">Nuitées</span>
+                <h3>Chambres d'Hôtes de Maîtres</h3>
+                <p>Découvrez le luxe de l'espace. Nos chambres offrent des volumes rares, des parquets d'époque et une vue plongeante sur le parc de 9 400 m². Un mariage parfait entre confort contemporain et élégance XVIIIème.</p>
+            </div>
+        </div>
+
+        <div class="service-block" id="receptions">
+            <div class="service-img">
+                <img src="https://durtepqo099rl.cloudfront.net/P1069/teY6KkbqCy/Propriete_fin_18e_siecle_a_vendre_Parc_arbore_de_9_000m2_Ideal_Gite_Chambr_4.webp" alt="Réceptions">
+            </div>
+            <div class="service-text">
+                <span class="accent">Célébrations</span>
+                <h3>Vin d'Honneur & Mariages</h3>
+                <p>Le parc clos de murs est le théâtre idéal pour vos cocktails et vins d'honneur. Recevez vos invités dans un cadre historique où chaque arbre et chaque pierre apportent une dimension intemporelle à votre union.</p>
+            </div>
+        </div>
+
+        <div class="service-block" id="seminaires">
+            <div class="service-img">
+                <img src="https://durtepqo099rl.cloudfront.net/P1069/JlOTyomDMG/Propriete_fin_18e_siecle_a_vendre_Parc_arbore_de_9_000m2_Ideal_Gite_Chambr_12.webp" alt="Séminaires">
+            </div>
+            <div class="service-text">
+                <span class="accent">Professionnel</span>
+                <h3>Séminaires & Comités</h3>
+                <p>Confidentialité et inspiration. Nous mettons à disposition nos salons de réception pour vos réunions stratégiques. Un environnement calme, loin du tumulte, pour favoriser la réflexion et la cohésion d'équipe.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="history-wrap" id="histoire">
+        <div class="container">
+            <span class="accent">Archives de Bourgogne</span>
+            <h2 style="font-size: 3rem; margin-bottom: 40px;">Épinac : Née du Feu et du Charbon.</h2>
+            <p style="max-width: 900px; font-size: 1.1rem; color: #fff;">L’histoire d’Épinac est celle d’un village devenu ville industrielle grâce au charbon. La verrerie, née de cette richesse énergétique, a contribué à son développement avant de disparaître avec les mutations économiques.</p>
+            
+            <div class="history-grid">
+                <div class="history-item">
+                    <h4>⛏️ Des mines qui transforment un village</h4>
+                    <p>Au XVIIIᵉ siècle, la découverte du charbon attire une main-d’œuvre importante. La Compagnie des mines d'Épinac transforme profondément la commune : galeries minières, cités ouvrières et voies ferrées voient le jour.</p>
+                </div>
+                <div class="history-item">
+                    <h4>🔥 La naissance de la verrerie</h4>
+                    <p>La fabrication du verre nécessite des températures extrêmes. Épinac dispose de la ressource idéale : le charbon. Sable, bois et savoir-faire se rencontrent pour créer une industrie florissante dès le XIXᵉ siècle.</p>
+                </div>
+                <div class="history-item">
+                    <h4>🏘️ Une société hiérarchisée</h4>
+                    <p>La vie est structurée : ouvriers en cités, ingénieurs en logements confortables et dirigeants dans des maisons de maîtres distinctes comme La Verrerie. Le travail industriel rythme alors chaque seconde du quotidien.</p>
+                </div>
+                <div class="history-item">
+                    <h4>🏚️ Un héritage visible</h4>
+                    <p>Même si les feux se sont éteints, l’empreinte reste forte : traces des installations, cités ouvrières et surtout cette mémoire collective liée au travail des mines et du verre que nous honorons ici.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/DSCF3387.JPG" style="width: 100%; height: 350px; object-fit: cover; opacity: 0.6; border: 1px solid var(--gold-brass);">
+            </div>
+        </div>
+    </section>
+
+    <section id="localisation">
+        <div class="container" style="padding-bottom: 50px;">
+            <span class="accent">Destination</span>
+            <h2>Au Cœur d'Épinac</h2>
+        </div>
+        <div class="map-frame">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2726.54!2d4.5167!3d46.9917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f26d!2s71360%20Épinac!5e0!3m2!1sfr!2sfr!4v1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4 style="color: white; font-size: 1.5rem; margin-bottom: 20px;">LA VERRERIE</h4>
+                <p style="color: #aaa;">Demeure historique des Maîtres Verriers. Mariages, Séminaires et Chambres d'Hôtes de prestige en Bourgogne.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Navigation</h5>
+                <ul class="footer-links">
+                    <li><a href="#chambres">Chambres d'Hôtes</a></li>
+                    <li><a href="#receptions">Vins d'Honneur</a></li>
+                    <li><a href="#seminaires">Séminaires</a></li>
+                    <li><a href="#histoire">Histoire</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul class="footer-links">
+                    <li>71360 Épinac, France</li>
+                    <li>+33 (0)3 85 00 00 00</li>
+                    <li>contact@laverrerie.fr</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Suivre</h5>
+                <ul class="footer-links">
+                    <li><a href="#">INSTAGRAM</a></li>
+                    <li><a href="#">FACEBOOK</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="margin-top: 80px; text-align: center; font-size: 0.7rem; color: #666; letter-spacing: 0.2em; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px;">
+            © 2026 LA VERRERIE ÉPINAC — BOURGOGNE — SITE OFFICIEL
+        </div>
+    </footer>
+
+</body>
+</html>

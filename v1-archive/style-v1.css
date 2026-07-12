@@ -1,0 +1,1029 @@
+/* =========================================================
+   LA VERRERIE — STYLE.CSS
+   Aligné sur le Brand Book v1.0 (2026)
+   ========================================================= */
+
+/* ---------- 1. FONTS ---------- */
+@font-face {
+    font-family: 'Road Race Stamp';
+    src: url('../fonts/road_race/Road Race Rough.otf') format('opentype'),
+         url('../fonts/road_race/Road Race Rough.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Road Race Outline';
+    src: url('../fonts/road_race/Road Race Outline.otf') format('opentype'),
+         url('../fonts/road_race/Road Race Outline.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ---------- 2. PALETTE BRAND BOOK ---------- */
+:root {
+    /* Primaires */
+    --forest:        #1B2620;   /* Vert Forêt */
+    --brass:         #A68953;   /* Laiton Prestige */
+    --stone:         #F2EDE4;   /* Calcaire */
+    --ink:           #1A1A1A;   /* Encre */
+
+    /* Secondaires */
+    --white:         #FFFFFF;
+    --slate:         #888888;   /* Gris Ardoise */
+    --light-stone:   #E8E3DA;   /* Gris Pierre Clair */
+    --champagne:     #D4AA70;   /* Or Champagne */
+
+    /* Variante "lisible" du laiton — pour textes sur fond clair (WCAG AA) */
+    --brass-text:    #6B5A2E;   /* Laiton profond — accents textes sur stone */
+
+    /* Utilitaires */
+    --glass:         rgba(255, 255, 255, 0.85);
+    --border-soft:   rgba(27, 38, 32, 0.12);
+    --shadow-soft:   0 30px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- 3. RESET & BASE ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--stone);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+img { display: block; max-width: 100%; }
+
+/* ---------- 4. TYPOGRAPHIE ÉDITORIALE ---------- */
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--forest);
+    letter-spacing: 0.05em;
+}
+/* H1 – Hero (italique, plus libre) */
+h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-style: italic;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+/* H2 – Titres de section (uppercase, dense) */
+h2 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+/* H3 – Sous-titres (italique, élégant) */
+h3 {
+    font-size: 1.8rem;
+    font-style: italic;
+    letter-spacing: 0.02em;
+}
+h4 {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+p {
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--ink);
+    text-align: justify;
+}
+
+/* Tag / accent (Montserrat, brass) */
+.accent {
+    color: var(--brass-text);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+}
+/* Sur fonds sombres, on garde le laiton lumineux du brand book */
+.hero .accent,
+.history-wrap .accent,
+.testimonials .accent,
+.price-card.dark .accent,
+footer .accent { color: var(--brass); }
+
+/* Numéro de section (style brand book : 01, 02…) */
+.section-num {
+    display: inline-block;
+    background: var(--brass);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    padding: 6px 14px;
+    margin-right: 12px;
+}
+
+/* ---------- 5. NAVIGATION ---------- */
+nav {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 60px;
+    background: var(--glass);
+    border-bottom: 1px solid var(--border-soft);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.nav-logo { display: flex; align-items: center; }
+.nav-logo img { height: 48px; width: auto; }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a {
+    color: var(--forest);
+    text-decoration: none;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--brass); }
+
+/* ---------- 6. HERO ---------- */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    background-image:
+        linear-gradient(rgba(27, 38, 32, 0.45), rgba(27, 38, 32, 0.25)),
+        url('../img/hero-mobile.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center;
+    padding: 0 20px;
+    filter: sepia(0.2);
+}
+@media (min-width: 768px) {
+    .hero {
+        background-image:
+            linear-gradient(rgba(27, 38, 32, 0.45), rgba(27, 38, 32, 0.25)),
+            url('../img/hero.webp');
+    }
+}
+.hero h1 {
+    color: var(--white);
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+.hero .accent { color: var(--white); }
+
+/* ---------- 7. PANNEAU RÉSERVATION ---------- */
+.booking-panel {
+    max-width: 1200px;
+    margin: -60px auto 100px;
+    background: var(--forest);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    padding: 30px;
+    box-shadow: var(--shadow-soft);
+    position: relative; z-index: 10;
+}
+.booking-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 24px;
+}
+.booking-item:last-of-type { border-right: none; }
+.booking-item label {
+    display: block;
+    color: var(--brass);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.booking-item select,
+.booking-item input {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-family: inherit;
+    font-size: 0.9rem;
+    width: 100%;
+    outline: none;
+}
+.booking-item select option { color: var(--ink); }
+
+.btn-book {
+    background: var(--brass);
+    color: var(--forest);
+    border: none;
+    padding: 18px 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.btn-book:hover { background: var(--forest); color: var(--brass); }
+
+/* ---------- 8. CONTAINER ---------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px;
+}
+.text-center { text-align: center; }
+
+/* ---------- 9. BLOCS SERVICES ---------- */
+.service-block {
+    background: var(--white);
+    border: 1px solid var(--border-soft);
+    margin-bottom: 30px;
+    display: flex;
+    overflow: hidden;
+    min-height: 450px;
+}
+.service-block:nth-child(even) { flex-direction: row-reverse; }
+.service-img { width: 50%; }
+.service-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: sepia(0.2);
+    transition: transform 0.6s ease;
+}
+.service-block:hover .service-img img { transform: scale(1.03); }
+.service-text {
+    width: 50%;
+    padding: 60px;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.service-text h3 { margin-bottom: 20px; color: var(--forest); }
+
+/* Badge "À venir" */
+.badge-coming {
+    display: inline-block;
+    background: var(--brass);
+    color: var(--forest);
+    padding: 6px 16px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    align-self: flex-start;
+}
+
+/* ---------- 10. GALERIE "L'ÂME DU LIEU" ---------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 50px;
+}
+.gallery-item {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    background: var(--light-stone);
+    border: 1px solid var(--border-soft);
+}
+.gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: sepia(0.2);
+    transition: transform 0.6s ease;
+}
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-caption {
+    position: absolute; bottom: 0; left: 0; width: 100%;
+    background: linear-gradient(transparent, rgba(27, 38, 32, 0.85));
+    color: var(--white);
+    padding: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+
+/* ---------- 11. HISTOIRE (FOND VIGNOBLE) ---------- */
+.history-wrap {
+    background-image:
+        linear-gradient(rgba(27, 38, 32, 0.92), rgba(27, 38, 32, 0.92)),
+        url('https://img.freepik.com/photos-gratuite/belle-vue-vignoble-dans-collines-verdoyantes-au-coucher-du-soleil_181624-23100.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--white);
+    padding: 120px 0;
+}
+.history-wrap h2,
+.history-wrap h4 { color: var(--brass); }
+.history-wrap p { color: var(--light-stone); }
+
+.history-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-top: 60px;
+}
+.history-item {
+    border-left: 1px solid var(--brass);
+    padding-left: 30px;
+}
+.history-item h3 {
+    display: flex; align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--brass);
+}
+.history-item .icon { width: 22px; height: 22px; flex-shrink: 0; }
+
+/* ---------- 12. TERROIR ---------- */
+.terroir-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+.terroir-item {
+    background: var(--white);
+    padding: 40px 30px;
+    border: 1px solid var(--border-soft);
+    transition: all 0.3s;
+}
+.terroir-item:hover {
+    border-color: var(--brass);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(27, 38, 32, 0.08);
+}
+.terroir-item h3 {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+.terroir-item .icon {
+    width: 28px; height: 28px;
+    flex-shrink: 0; color: var(--brass);
+}
+
+/* ---------- 13. TARIFS ---------- */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+.price-card {
+    padding: 50px 30px;
+    text-align: center;
+    border: 1px solid var(--border-soft);
+    transition: all 0.4s;
+    background: var(--white);
+}
+.price-card.dark {
+    background: var(--forest);
+    color: var(--white);
+    border: none;
+}
+.price-card.dark p { color: var(--light-stone); }
+.price-card.featured {
+    border: 2px solid var(--brass);
+    transform: scale(1.03);
+}
+.price-val {
+    font-size: 3rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    margin: 20px 0;
+    color: var(--brass);
+}
+
+/* ---------- 14. TÉMOIGNAGES ---------- */
+.testimonials {
+    background: var(--forest);
+    color: var(--stone);
+    padding: 100px 0;
+    position: relative;
+}
+.testimonials::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--brass);
+}
+.testimonials h2 { color: var(--stone); }
+.testimonials .accent { color: var(--brass); }
+.testi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+.testi-item {
+    font-style: italic;
+    border-left: 2px solid var(--brass);
+    padding-left: 30px;
+}
+.testi-item p {
+    color: var(--stone);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+.testi-item p.cite {
+    margin-top: 18px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brass);
+}
+
+/* ---------- 14b. CONTACT ---------- */
+.contact-section {
+    background: var(--light-stone);
+    padding: 0;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+}
+.contact-intro h2 {
+    margin-bottom: 24px;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    text-transform: none;
+    letter-spacing: 0.02em;
+    font-style: italic;
+}
+.contact-intro p {
+    color: var(--ink);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 36px;
+}
+.contact-info {
+    list-style: none;
+    border-top: 1px solid var(--border-soft);
+}
+.contact-info li {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    align-items: baseline;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-soft);
+    font-size: 0.95rem;
+}
+.contact-label {
+    color: var(--brass-text);
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    font-weight: 700;
+}
+.contact-info a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+.contact-info a:hover { border-bottom-color: var(--brass); }
+
+/* Form */
+.contact-form {
+    background: var(--white);
+    padding: 50px;
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 20px 50px rgba(27, 38, 32, 0.06);
+}
+.form-field { margin-bottom: 22px; display: block; }
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 22px;
+}
+.form-row-2 .form-field { margin-bottom: 0; }
+
+.form-field label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--forest);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.form-field .opt {
+    color: var(--slate);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 0.7rem;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border-soft);
+    background: var(--stone);
+    color: var(--ink);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    transition: border-color 0.3s, background 0.3s;
+    border-radius: 0;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.form-field select {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%231B2620' stroke-width='1.5' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+.form-field textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--brass);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(166, 137, 83, 0.15);
+}
+
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+.btn-submit {
+    background: var(--forest);
+    color: var(--white);
+    border: none;
+    padding: 18px 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    margin-top: 10px;
+}
+.btn-submit:hover { background: var(--brass); color: var(--forest); }
+.btn-submit:focus-visible {
+    outline: 3px solid var(--brass);
+    outline-offset: 2px;
+}
+
+.form-note {
+    margin-top: 16px;
+    font-size: 0.75rem;
+    color: var(--slate);
+    text-align: center;
+    font-style: italic;
+}
+
+/* ---------- 15. CARTE ---------- */
+.map-frame {
+    height: 450px;
+    background: var(--light-stone);
+    border-top: 5px solid var(--forest);
+}
+.map-frame iframe {
+    width: 100%; height: 100%;
+    border: 0;
+    filter: grayscale(1) contrast(0.95);
+}
+
+/* ---------- 16. FOOTER ---------- */
+footer {
+    padding: 100px 60px 40px;
+    background: var(--forest);
+    color: var(--white);
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.footer-col .footer-h {
+    color: var(--brass);
+    margin-bottom: 25px;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.footer-logo img { height: 70px; margin-bottom: 20px; filter: brightness(0) invert(1); }
+.footer-col p { color: var(--light-stone); }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; color: var(--light-stone); font-size: 0.85rem; }
+.footer-links a {
+    color: var(--light-stone);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--brass); }
+.footer-bottom {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--light-stone);
+    letter-spacing: 0.2em;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 40px;
+}
+
+/* ---------- 16b. COMPOSANTS ÉDITORIAUX ---------- */
+
+/* Sous-titre hero */
+.hero-sub {
+    max-width: 640px;
+    margin: 30px auto 0;
+    color: var(--white);
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+
+/* Indicateur de scroll hero */
+.hero-scroll {
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28px; height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 8px;
+}
+.hero-scroll span {
+    width: 2px; height: 8px;
+    background: var(--white);
+    border-radius: 2px;
+    animation: scrollDot 2s infinite;
+}
+@keyframes scrollDot {
+    0%   { opacity: 1; transform: translateY(0); }
+    50%  { opacity: 0.3; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.hero { position: relative; }
+
+/* Lien fléché éditorial */
+.link-arrow {
+    position: relative;
+    display: inline-block;
+    color: var(--brass-text);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    padding-right: 28px;
+    transition: color 0.3s, padding-right 0.3s;
+}
+.link-arrow::after {
+    content: "→";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 0.3s;
+}
+.link-arrow:hover {
+    color: var(--forest);
+    padding-right: 36px;
+}
+.link-arrow:hover::after { right: -8px; }
+
+.cta-line { margin-top: 22px; text-align: left; }
+
+/* Ligne contextuelle dans les cartes prix */
+.price-line {
+    color: var(--brass-text);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    font-weight: 700;
+    margin-top: -10px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.price-card.dark .price-line { color: var(--champagne); }
+
+/* ---------- 16c. PAGE MARIAGES ---------- */
+
+/* Hero spécifique */
+.hero.hero-mariage {
+    background-image:
+        linear-gradient(rgba(27, 38, 32, 0.55), rgba(27, 38, 32, 0.30)),
+        url('../img/392e44c7-e2c1-4bac-9174-ed9a58dcab7c.webp');
+}
+
+/* Item de nav actif */
+.nav-links a.is-active {
+    color: var(--brass);
+    border-bottom: 1px solid var(--brass);
+    padding-bottom: 4px;
+}
+
+/* TODO inline marker (placeholder visible pendant le dev) */
+.todo-note {
+    display: inline-block;
+    background: rgba(166, 137, 83, 0.18);
+    color: var(--brass-text);
+    font-size: 0.7rem;
+    padding: 1px 8px;
+    border-radius: 3px;
+    margin-left: 6px;
+    font-family: 'Montserrat', monospace;
+    letter-spacing: 0.05em;
+}
+
+/* Faits chiffrés */
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    padding: 50px 0;
+}
+.fact {
+    text-align: center;
+    border-right: 1px solid var(--border-soft);
+    padding: 0 10px;
+}
+.fact:last-child { border-right: none; }
+.fact-num {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 500;
+    font-style: italic;
+    color: var(--forest);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.fact-unit {
+    display: block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--brass-text);
+    font-weight: 600;
+}
+.fact-unit small {
+    display: block;
+    font-size: 0.6rem;
+    margin-top: 4px;
+    opacity: 0.6;
+    text-transform: none;
+    letter-spacing: 0.05em;
+}
+
+/* Inclus dans la privatisation */
+.includes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border-soft);
+    border: 1px solid var(--border-soft);
+}
+.include-item {
+    background: var(--white);
+    padding: 40px 32px;
+    transition: background 0.3s;
+}
+.include-item:hover { background: var(--stone); }
+.include-tick {
+    display: inline-block;
+    color: var(--brass);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    letter-spacing: 0.1em;
+}
+.include-item h3 {
+    font-size: 1.1rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    color: var(--forest);
+}
+.include-item p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* Bandeau brochure & tarif */
+.brochure-band {
+    background: var(--forest);
+    color: var(--stone);
+    padding: 80px 0;
+}
+.brochure-band .accent { color: var(--brass); }
+.brochure-band p { color: var(--light-stone); }
+.brochure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+    padding: 0 40px;
+}
+.brochure-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(3.5rem, 6vw, 5rem);
+    color: var(--brass);
+    line-height: 1;
+    margin: 14px 0 6px;
+}
+.brochure-cap {
+    color: var(--brass) !important;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+.brochure-cta-wrap {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.brochure-cta-wrap h3 {
+    color: var(--stone);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+.brochure-form .form-field label { color: var(--light-stone); }
+.brochure-form .form-field input {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--stone);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+.brochure-form .form-field input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--brass);
+    box-shadow: 0 0 0 3px rgba(166, 137, 83, 0.25);
+}
+.brochure-form .btn-submit {
+    background: var(--brass);
+    color: var(--forest);
+}
+.brochure-form .btn-submit:hover {
+    background: var(--stone);
+    color: var(--forest);
+}
+
+/* FAQ */
+.faq-list {
+    max-width: 880px;
+    margin: 0 auto;
+}
+.faq-list details {
+    border-bottom: 1px solid var(--border-soft);
+    padding: 22px 0;
+}
+.faq-list details:first-child { border-top: 1px solid var(--border-soft); }
+.faq-list summary {
+    cursor: pointer;
+    list-style: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--forest);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-right: 10px;
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after {
+    content: "+";
+    color: var(--brass);
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+.faq-list details[open] summary::after { content: "−"; }
+.faq-list details p {
+    margin-top: 14px;
+    color: var(--ink);
+    font-size: 0.95rem;
+    max-width: 720px;
+}
+
+/* ---------- 17. RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+    nav { padding: 16px 30px; }
+    .nav-links { gap: 18px; }
+    .booking-panel { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .booking-item:nth-child(2) { border-right: none; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .terroir-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+
+    /* Mariages */
+    .facts-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 0; }
+    .fact:nth-child(2) { border-right: none; }
+    .includes-grid { grid-template-columns: repeat(2, 1fr); }
+    .brochure-grid { grid-template-columns: 1fr; gap: 50px; padding: 0 20px; }
+}
+
+@media (max-width: 768px) {
+    nav { padding: 14px 20px; flex-wrap: wrap; }
+    .nav-logo img { height: 40px; }
+    .nav-links { gap: 12px; flex-wrap: wrap; }
+    .nav-links a { font-size: 0.6rem; }
+
+    .container { padding: 60px 24px; }
+
+    .booking-panel {
+        grid-template-columns: 1fr;
+        margin: -40px 20px 60px;
+        padding: 24px;
+    }
+    .booking-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 16px 0;
+    }
+    .booking-item:last-of-type { border-bottom: none; }
+
+    .service-block,
+    .service-block:nth-child(even) {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .service-img,
+    .service-text { width: 100%; }
+    .service-img { height: 280px; }
+    .service-text { padding: 40px 28px; }
+
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item { height: 280px; }
+
+    .history-wrap {
+        padding: 80px 0;
+        background-attachment: scroll;
+    }
+    .history-grid { grid-template-columns: 1fr; gap: 30px; }
+
+    .price-card.featured { transform: none; }
+
+    .testi-grid { grid-template-columns: 1fr; gap: 40px; }
+
+    footer { padding: 60px 24px 30px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+
+    .contact-form { padding: 30px 22px; }
+    .form-row-2 { grid-template-columns: 1fr; gap: 0; }
+    .form-row-2 .form-field { margin-bottom: 22px; }
+    .contact-info li { grid-template-columns: 1fr; gap: 4px; }
+
+    /* Mariages mobile */
+    .facts-grid { grid-template-columns: 1fr; padding: 30px 0; }
+    .fact { border-right: none; border-bottom: 1px solid var(--border-soft); padding-bottom: 30px; }
+    .fact:last-child { border-bottom: none; padding-bottom: 0; }
+    .includes-grid { grid-template-columns: 1fr; }
+    .brochure-cta-wrap { padding: 26px 22px; }
+    .faq-list summary { font-size: 1.1rem; }
+}

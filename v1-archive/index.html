@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1B2620">
+
+    <title>La Verrerie d'Épinac — Demeure de Maître en Bourgogne · Chambres d'hôtes, mariages, séminaires</title>
+    <meta name="description" content="Née du feu et du charbon, La Verrerie est une demeure de maître du XIXᵉ siècle, à Épinac, au cœur de la Bourgogne du Sud. Chambres d'hôtes, mariages et séminaires dans un parc clos de 9 400 m².">
+
+    <!-- OpenGraph / réseaux sociaux -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="La Verrerie d'Épinac — Demeure de Maître en Bourgogne">
+    <meta property="og:description" content="Née du feu et du charbon. Chambres d'hôtes, mariages et séminaires dans une demeure du XIXᵉ siècle, en Bourgogne du Sud.">
+    <meta property="og:image" content="https://laverrerie.fr/assets/img/hero.webp">
+    <meta property="og:url" content="https://laverrerie.fr/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Canonical & langue alternative -->
+    <link rel="canonical" href="https://laverrerie.fr/">
+    <link rel="alternate" hreflang="fr" href="https://laverrerie.fr/">
+    <link rel="alternate" hreflang="en" href="https://laverrerie.fr/en/">
+    <link rel="alternate" hreflang="x-default" href="https://laverrerie.fr/">
+
+    <!-- Favicon (à remplacer par un vrai .ico/png) -->
+    <link rel="icon" href="assets/logo/logo_verrerie_v12.webp" type="image/webp">
+
+    <!-- Polices : chargement non bloquant (média swap) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Préchargement hero responsive -->
+    <link rel="preload" as="image" href="assets/img/hero-mobile.webp" media="(max-width: 767px)" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/img/hero.webp" media="(min-width: 768px)" fetchpriority="high">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Schema.org : LodgingBusiness + EventVenue (Google Hospitality) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LodgingBusiness",
+          "@id": "https://laverrerie.fr/#lodging",
+          "name": "La Verrerie d'Épinac",
+          "description": "Demeure de maître du XIXᵉ siècle, ancienne résidence des directeurs de la verrerie d'Épinac. Chambres d'hôtes, mariages et séminaires en Bourgogne du Sud.",
+          "url": "https://laverrerie.fr/",
+          "telephone": "+33-3-85-00-00-00",
+          "email": "contact@laverrerie.fr",
+          "image": "https://laverrerie.fr/assets/img/hero.webp",
+          "logo": "https://laverrerie.fr/assets/logo/logo_verrerie_v12.webp",
+          "priceRange": "€€€",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "TODO_ADRESSE_EXACTE",
+            "addressLocality": "Épinac",
+            "postalCode": "71360",
+            "addressRegion": "Bourgogne-Franche-Comté",
+            "addressCountry": "FR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 46.9889,
+            "longitude": 4.5103
+          },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "Parc clos de 9 400 m²", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Petit-déjeuner inclus", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Parking privé", "value": true }
+          ],
+          "sameAs": [
+            "https://www.instagram.com/laverrerie.epinac",
+            "https://www.facebook.com/laverrerie.epinac"
+          ]
+        },
+        {
+          "@type": "EventVenue",
+          "@id": "https://laverrerie.fr/#venue",
+          "name": "La Verrerie — Lieu de réception",
+          "description": "Demeure historique pour mariages, vins d'honneur et événements privés en Bourgogne. Parc clos de 9 400 m², salons d'apparat, capacité d'accueil sur mesure.",
+          "url": "https://laverrerie.fr/#receptions",
+          "address": { "@id": "https://laverrerie.fr/#lodging" },
+          "maximumAttendeeCapacity": 120
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://laverrerie.fr/#website",
+          "url": "https://laverrerie.fr/",
+          "name": "La Verrerie d'Épinac",
+          "inLanguage": "fr-FR",
+          "publisher": { "@id": "https://laverrerie.fr/#lodging" }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="nav-logo" aria-label="La Verrerie - Accueil">
+            <img src="assets/logo/logo_verrerie_v12.webp" alt="La Verrerie — Épinac, Bourgogne" width="240" height="120" fetchpriority="high">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#chambres">Chambres</a></li>
+            <li><a href="#details">L'Art du Détail</a></li>
+            <li><a href="mariages/">Mariages</a></li>
+            <li><a href="#terroir">Terroir</a></li>
+            <li><a href="#histoire">Histoire</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <span class="accent">Épinac · Bourgogne du Sud · Demeure de Maître</span>
+        <h1>Là où le feu<br>a forgé la pierre.</h1>
+        <p class="hero-sub">Une demeure du XIXᵉ siècle, ouverte aux voyageurs, aux célébrations et au temps long.</p>
+        <a class="hero-scroll" href="#chambres" aria-label="Découvrir la demeure">
+            <span></span>
+        </a>
+    </section>
+
+    <div class="booking-panel" id="quick-demand">
+        <div class="booking-item">
+            <label for="exp">Expérience</label>
+            <select id="exp">
+                <option value="chambres">Nuit en Chambre d'Hôtes</option>
+                <option value="mariage">Vin d'Honneur &amp; Mariage</option>
+                <option value="seminaire">Séminaire de Direction</option>
+            </select>
+        </div>
+        <div class="booking-item">
+            <label for="arrivee">Arrivée</label>
+            <input id="arrivee" type="date">
+        </div>
+        <div class="booking-item">
+            <label for="pers">Personnes</label>
+            <input id="pers" type="number" min="1" placeholder="2">
+        </div>
+        <button class="btn-book" type="button" data-quick-demand>Demander une réservation</button>
+    </div>
+
+    <!-- ============== SERVICES ============== -->
+    <section class="container" id="chambres">
+        <div class="text-center" style="margin-bottom: 80px;">
+            <span class="accent">L'Art de Recevoir</span>
+            <h2>Services de la Demeure</h2>
+        </div>
+
+        <div class="service-block">
+            <div class="service-img">
+                <img src="assets/img/076229b6-0a17-4367-8c39-4e120dbdb61a.webp" alt="Chambre d'hôtes — La Verrerie" width="600" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="service-text">
+                <span class="accent">Nuitées</span>
+                <h3>Chambres d'Hôtes de Maîtres</h3>
+                <p>Six mètres sous plafond. Un parquet point de Hongrie qui craque sous le pas. La fenêtre s'ouvre sur les neuf mille quatre cents mètres carrés du parc, et le silence qui suit. Vous dormirez là où dormaient les directeurs de la verrerie&nbsp;: dans des volumes que l'on ne sait plus bâtir.</p>
+                <p class="cta-line"><a class="link-arrow" href="#contact">Réserver une nuitée</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== L'ÂME DU LIEU ============== -->
+    <section class="container" id="details" style="padding-top: 0;">
+        <div class="text-center">
+            <span class="accent">Immersion</span>
+            <h2>L'Âme du Lieu</h2>
+            <p style="max-width: 720px; margin: 20px auto;">Le fer fondu, le verre soufflé, la pierre calcaire. La Verrerie n'a pas été restaurée — elle a été <em>tenue</em>. Chaque matière y porte la mémoire d'un geste ouvrier.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="assets/img/69c0d00d-4ff5-461e-baba-32cb8ce84ac9.webp" alt="Parquets Point de Hongrie" width="800" height="600" loading="lazy" decoding="async">
+                <div class="gallery-caption">Parquets Point de Hongrie</div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/ia/Gemini_Generated_Image_sm4vxhsm4vxhsm4v.webp" alt="Cheminées d'époque" width="896" height="1195" loading="lazy" decoding="async">
+                <div class="gallery-caption">Cheminées d'époque</div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/ia/Gemini_Generated_Image_t2pxxwt2pxxwt2px.webp" alt="Radiateurs Fonte Rococo" width="1200" height="609" loading="lazy" decoding="async">
+                <div class="gallery-caption">Radiateurs Fonte Rococo</div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/ia/Gemini_Generated_Image_v8kq31v8kq31v8kq.webp" alt="Carreaux de ciment" width="1195" height="896" loading="lazy" decoding="async">
+                <div class="gallery-caption">Carreaux de Ciment</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== RÉCEPTIONS & SÉMINAIRES ============== -->
+    <section class="container">
+        <div class="service-block" id="receptions">
+            <div class="service-img">
+                <img src="assets/img/392e44c7-e2c1-4bac-9174-ed9a58dcab7c.webp" alt="Mariages — La Verrerie" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="service-text">
+                <span class="accent">Célébrations</span>
+                <h3>Mariages &amp; Vins d'Honneur</h3>
+                <p>Un parc clos de murs. Des arbres centenaires. Une allée gravillonnée vers la maison, jusqu'au dîner sous la tonnelle. Privatisation totale du domaine — vous recevez vos invités là où l'on recevait, autrefois, les maîtres verriers de toute la Saône-et-Loire.</p>
+                <p class="cta-line"><a class="link-arrow" href="#contact">Demander la brochure mariage</a></p>
+            </div>
+        </div>
+
+        <div class="service-block" id="seminaires">
+            <div class="service-img">
+                <img src="assets/img/64f0417d-c842-41ff-b0ac-16dc5616703e.webp" alt="Séminaires — La Verrerie" width="800" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="service-text">
+                <span class="badge-coming">Ouverture 2028</span>
+                <span class="accent">Professionnel</span>
+                <h3>Séminaires &amp; Comités de Direction</h3>
+                <p>Loin du verre fumé des hôtels d'affaires. Pour les conseils restreints, les week-ends stratégiques, les retraites de comité. À la fin du jour&nbsp;: le silence du Morvan, une bouteille de Pommard, et les idées qui s'éclaircissent.</p>
+                <p class="cta-line"><a class="link-arrow" href="#contact">Pré-réserver pour 2028</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== TERROIR ============== -->
+    <section class="container" id="terroir" style="padding-top: 0;">
+        <div class="text-center">
+            <span class="accent">Inspiration</span>
+            <h2>Explorer la Bourgogne</h2>
+        </div>
+        <div class="terroir-grid">
+            <div class="terroir-item">
+                <h3>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M8 2h8M12 2v6M8 8c0 4 2 6 4 6s4-2 4-6M12 14v8M9 22h6"/>
+                    </svg>
+                    Beaune &amp; ses Crus
+                </h3>
+                <p>À 30 minutes, les vignobles de Meursault, Pommard et Volnay vous attendent. Dégustations dans des caves classées, déjeuners chez les vignerons, balades dans les climats inscrits à l'UNESCO.</p>
+            </div>
+            <div class="terroir-item">
+                <h3>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3 21h18M5 21V10l3-2 4 2 4-2 3 2v11M9 21v-5h6v5"/>
+                    </svg>
+                    Cité d'Autun
+                </h3>
+                <p>Porte du Morvan, Autun dévoile 2 000 ans d'histoire entre son théâtre antique, ses portes romaines et sa cathédrale Saint-Lazare. À 20 minutes seulement de La Verrerie.</p>
+            </div>
+            <div class="terroir-item">
+                <h3>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 22V14M8 14c-3 0-5-2-5-5 0-2 1-3 2-4 0-2 2-4 5-4s5 2 5 4c1 1 2 2 2 4 0 3-2 5-5 5z"/>
+                    </svg>
+                    Parc du Morvan
+                </h3>
+                <p>Évadez-vous sur les sentiers sauvages et les lacs du Morvan, à deux pas du domaine. Randonnée, vélo, pêche et nuit étoilée dans un parc naturel régional préservé.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== HISTOIRE ============== -->
+    <section class="history-wrap" id="histoire">
+        <div class="container">
+            <span class="accent">Archives de Bourgogne</span>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 40px;">Épinac : Née du Feu et du Charbon</h2>
+            <p style="max-width: 900px; font-size: 1.05rem; color: var(--white); margin-bottom: 50px;">À la fin du XVIIIᵉ siècle, on a découvert sous Épinac une chose plus précieuse que la vigne&nbsp;: du charbon. Pendant cent cinquante ans, le village est devenu une ville-usine. Des fours rugissaient, du verre était soufflé, et les directeurs habitaient ici, dans cette maison. Quand les feux se sont éteints, la pierre est restée.</p>
+
+            <div class="history-grid">
+                <div class="history-item">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M3 21l8-8M11 13l4-10 6 4-10 6"/>
+                        </svg>
+                        Des mines qui transforment un village
+                    </h3>
+                    <p>Au XVIIIᵉ siècle, la découverte du charbon attire une main-d'œuvre importante. Épinac passe de hameau rural à pôle industriel actif sur près de deux siècles.</p>
+                </div>
+                <div class="history-item">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 22c4 0 7-3 7-7 0-3-3-5-3-9 0 0-2 2-2 5 0-3-2-5-2-5-2 3-4 5-4 9 0 4 3 7 4 7z"/>
+                        </svg>
+                        La naissance de la verrerie
+                    </h3>
+                    <p>La fabrication du verre nécessite des températures extrêmes. Épinac dispose de la ressource idéale : un charbon abondant, alimentant les fours en continu.</p>
+                </div>
+                <div class="history-item">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M3 21h18M5 21V11l4-3v13M13 21V8l4-3v16M9 14h.01M9 17h.01M17 11h.01M17 14h.01"/>
+                        </svg>
+                        Une société hiérarchisée
+                    </h3>
+                    <p>La vie est structurée : ouvriers en cités et dirigeants dans des maisons de maîtres comme La Verrerie, dont l'architecture témoigne du statut social de ses occupants.</p>
+                </div>
+                <div class="history-item">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M4 21V8l8-5 8 5v13M4 21h16M9 21v-7h6v7M8 11h.01M16 11h.01"/>
+                        </svg>
+                        Un héritage visible
+                    </h3>
+                    <p>Même si les feux se sont éteints, l'empreinte reste forte : traces des installations, mémoire collective et architecture préservée. La Verrerie en est aujourd'hui l'un des derniers témoins habités.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== TARIFS ============== -->
+    <section class="container" id="tarifs">
+        <div class="text-center">
+            <span class="accent">Tarifs</span>
+            <h2>Trois Façons de Venir</h2>
+            <p style="max-width: 640px; margin: 20px auto 0;">Trois formules, une même exigence&nbsp;: que chaque heure passée ici en vaille deux ailleurs.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-card dark">
+                <span class="accent">Évasion</span>
+                <div class="price-val">180€</div>
+                <p class="price-line">la nuit · pour deux</p>
+                <p>Chambre de maître, petit-déjeuner gourmand au jardin, accès libre au parc clos.</p>
+            </div>
+            <div class="price-card featured">
+                <span class="accent">Privatisation</span>
+                <div class="price-val">4 500€</div>
+                <p class="price-line">le week-end</p>
+                <p>Domaine entier privatisé. Parc, salons d'apparat, hébergement des proches sur place.</p>
+            </div>
+            <div class="price-card dark">
+                <span class="accent">Séminaire</span>
+                <div class="price-val">85€</div>
+                <p class="price-line">par personne · journée</p>
+                <p>Forfait journée d'étude, déjeuner inclus. Pré-réservations ouvertes pour 2028.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== TÉMOIGNAGES ============== -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <span class="accent">Avis</span>
+                <h2>Paroles d'Hôtes</h2>
+            </div>
+            <div class="testi-grid">
+                <div class="testi-item">
+                    <p>« Un séjour hors du temps. La Verrerie n'est pas seulement une demeure, c'est une âme. »</p>
+                    <p class="cite">— Famille De Beaumont, Lyon</p>
+                </div>
+                <div class="testi-item">
+                    <p>« L'accueil est à la hauteur du lieu : magnifique. Un bijou historique au cœur d'Épinac. »</p>
+                    <p class="cite">— M. et Mme Morel, Suisse</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== CONTACT ============== -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+
+                <div class="contact-intro">
+                    <span class="accent">Écrivez-nous</span>
+                    <h2>Une demande,<br>une réponse personnelle.</h2>
+                    <p>Une nuitée, un mariage, un séminaire à venir. Toutes les demandes trouvent une réponse écrite, signée, en moins de vingt-quatre heures.</p>
+                    <ul class="contact-info">
+                        <li>
+                            <span class="contact-label">Téléphone</span>
+                            <a href="tel:+33385000000">+33 (0)3 85 00 00 00</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:contact@laverrerie.fr">contact@laverrerie.fr</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">Adresse</span>
+                            <span>71360 Épinac<br>Saône-et-Loire · Bourgogne</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- TODO: remplacer YOUR_FORMSPREE_ID après inscription sur formspree.io (gratuit, 50 msg/mois) -->
+                <form class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+                    <div class="form-field">
+                        <label for="f-type">Type de demande</label>
+                        <select id="f-type" name="type" required>
+                            <option value="chambres">Nuitée(s) en chambre d'hôtes</option>
+                            <option value="mariage">Mariage ou réception</option>
+                            <option value="seminaire">Séminaire (à partir de 2028)</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-field">
+                            <label for="f-name">Nom complet</label>
+                            <input id="f-name" type="text" name="name" required autocomplete="name">
+                        </div>
+                        <div class="form-field">
+                            <label for="f-email">Email</label>
+                            <input id="f-email" type="email" name="email" required autocomplete="email">
+                        </div>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-field">
+                            <label for="f-phone">Téléphone <span class="opt">(optionnel)</span></label>
+                            <input id="f-phone" type="tel" name="phone" autocomplete="tel">
+                        </div>
+                        <div class="form-field">
+                            <label for="f-date">Date souhaitée</label>
+                            <input id="f-date" type="date" name="date">
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="f-people">Nombre de personnes</label>
+                        <input id="f-people" type="number" name="people" min="1" placeholder="2">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="f-message">Votre message</label>
+                        <textarea id="f-message" name="message" rows="5" placeholder="Quelques mots sur votre projet, vos dates flexibles, vos demandes particulières…"></textarea>
+                    </div>
+
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
+
+                    <button type="submit" class="btn-submit">Envoyer ma demande</button>
+                    <p class="form-note">Vos informations restent strictement confidentielles. Aucune donnée n'est revendue ni partagée.</p>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== CARTE ============== -->
+    <section id="map" aria-label="Localisation de La Verrerie">
+        <div class="map-frame">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.7!2d4.5103!3d46.9889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDU5JzIwLjAiTiA0wrAzMCczNy4xIkU!5e0!3m2!1sfr!2sfr!4v1700000000000"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="La Verrerie — 71360 Épinac"></iframe>
+        </div>
+    </section>
+
+    <!-- ============== FOOTER ============== -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col footer-logo">
+                <img src="assets/logo/logo_verrerie_v12.webp" alt="La Verrerie" width="200" height="100" loading="lazy">
+                <p>Demeure historique des Maîtres Verriers. Mariages et Chambres d'Hôtes en Bourgogne.</p>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-h">Explorer</h3>
+                <ul class="footer-links">
+                    <li><a href="#chambres">Chambres</a></li>
+                    <li><a href="#receptions">Réceptions</a></li>
+                    <li><a href="#terroir">Activités</a></li>
+                    <li><a href="#histoire">Histoire</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-h">Contact</h3>
+                <ul class="footer-links">
+                    <li>71360 Épinac, France</li>
+                    <li><a href="tel:+33385000000">+33 (0)3 85 00 00 00</a></li>
+                    <li><a href="mailto:contact@laverrerie.fr">contact@laverrerie.fr</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-h">Réseaux</h3>
+                <ul class="footer-links">
+                    <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 LA VERRERIE ÉPINAC — BOURGOGNE
+        </div>
+    </footer>
+
+    <!-- Pré-remplissage du formulaire depuis le panneau d'accroche -->
+    <script>
+    (function () {
+        var btn = document.querySelector('[data-quick-demand]');
+        if (!btn) return;
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            var copy = function (from, to) {
+                var s = document.getElementById(from), t = document.getElementById(to);
+                if (s && t && s.value) t.value = s.value;
+            };
+            copy('exp', 'f-type');
+            copy('arrivee', 'f-date');
+            copy('pers', 'f-people');
+            var contact = document.getElementById('contact');
+            if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(function () { var n = document.getElementById('f-name'); if (n) n.focus(); }, 700);
+        });
+    })();
+    </script>
+
+</body>
+</html>
