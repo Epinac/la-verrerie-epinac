@@ -202,34 +202,6 @@
         });
     }
 
-    /* ---- 8. Bandeau dev mode (toggle annotations photo) ---- */
-    function setupDevBanner() {
-        // Vérifie si la page contient des emplacements photo en attente
-        var hasPending = document.querySelector('.photo-pending');
-        if (!hasPending) return;
-
-        // Crée le bandeau
-        var banner = document.createElement('div');
-        banner.className = 'dev-banner';
-        banner.textContent = 'Aperçu placeholders';
-        banner.title = 'Cliquer pour afficher / masquer les annotations photo';
-        banner.addEventListener('click', function () {
-            document.body.classList.toggle('no-dev-mode');
-            try {
-                localStorage.setItem('verrerie-no-dev-mode',
-                    document.body.classList.contains('no-dev-mode') ? '1' : '0');
-            } catch (e) { /* ignore */ }
-        });
-        document.body.appendChild(banner);
-
-        // Restaure l'état précédent
-        try {
-            if (localStorage.getItem('verrerie-no-dev-mode') === '1') {
-                document.body.classList.add('no-dev-mode');
-            }
-        } catch (e) { /* ignore */ }
-    }
-
     /* ---- Init ---- */
     function init() {
         setupScrollState();
@@ -239,7 +211,6 @@
         setupMobileLinkClose();
         setupReveals();
         setupLegalModal();
-        setupDevBanner();
     }
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
