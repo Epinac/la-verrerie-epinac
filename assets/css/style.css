@@ -552,6 +552,19 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     font-weight: 400;
     margin-left: -0.04em;
 }
+.hero-badge {
+    display: inline-block;
+    margin: var(--s-4) 0 0;
+    padding: 10px 22px;
+    background: var(--brass);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    opacity: 0;
+    animation: fadeUp 1s var(--ease-out) 0.7s forwards;
+}
 .hero-mark .place {
     display: flex;
     align-items: center;
@@ -2321,6 +2334,7 @@ body.dev-mode .photo-pending::after {
     .hero-bg, .testimony-bg { animation: none; }
     .hero-mark .eyebrow,
     .hero-mark h1,
+    .hero-badge,
     .hero-mark .place,
     .hero-foot { animation: none; opacity: 1; }
     * { transition: none !important; animation: none !important; }
