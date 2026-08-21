@@ -54,12 +54,13 @@
 </div>
 <script>
 (function () {
+    var isLocal = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) || location.protocol === 'file:';
     var params = new URLSearchParams(location.search);
     var bypass = params.get('preview') === 'verrerie2026';
     if (bypass) { try { sessionStorage.setItem('vr_preview', '1'); } catch (e) {} }
     var stored = false;
     try { stored = sessionStorage.getItem('vr_preview') === '1'; } catch (e) {}
-    if (bypass || stored) { document.documentElement.classList.add('gate-bypass'); }
+    if (isLocal || bypass || stored) { document.documentElement.classList.add('gate-bypass'); }
 })();
 </script>
 
