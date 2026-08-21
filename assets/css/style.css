@@ -56,6 +56,7 @@
 *::selection { background: var(--brass); color: var(--paper); }
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
 }
@@ -1633,16 +1634,16 @@ body.is-modal-open { overflow: hidden; }
 }
 
 /* ---------- DEV MODE — annotations photo + contenu en attente ---------- */
-/* Toggle via body.no-dev-mode (caché) ou body sans classe (affiché) */
+/* Masqué par défaut (site public). Activer via body.dev-mode en local pour voir
+   quelles photos restent à fournir. */
 
-/* Annotation photo : badge en haut à gauche du conteneur image */
-.photo-pending {
-    position: relative;
-    isolation: isolate;
+.photo-pending { position: relative; isolation: isolate; }
+
+body.dev-mode .photo-pending {
     outline: 2px dashed rgba(181, 150, 97, 0.6);
     outline-offset: -2px;
 }
-.photo-pending::after {
+body.dev-mode .photo-pending::after {
     content: "📷 " attr(data-photo-ref) " — " attr(data-photo-desc);
     position: absolute;
     top: 12px;
@@ -1662,14 +1663,6 @@ body.is-modal-open { overflow: hidden; }
     line-height: 1.4;
     pointer-events: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Toggle dev mode off : tout est invisible */
-body.no-dev-mode .photo-pending {
-    outline: none;
-}
-body.no-dev-mode .photo-pending::after {
-    display: none;
 }
 
 /* ---------- LE CARNET — blog éditorial ---------- */
