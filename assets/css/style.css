@@ -1315,6 +1315,9 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     line-height: 1.1;
     letter-spacing: -0.005em;
 }
+.includes-list h3 a { transition: color var(--duration); }
+.includes-list h3 a:hover { color: var(--brass-deep);
+}
 .includes-list p {
     font-size: var(--t-16);
     line-height: 1.6;
