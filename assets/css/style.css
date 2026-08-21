@@ -362,7 +362,7 @@ body.is-nav-open .topbar-burger { color: var(--ink); }
 /* ===== BURGER (mobile) ===== */
 .topbar-burger {
     display: none;
-    width: 32px; height: 32px;
+    width: 44px; height: 44px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -371,6 +371,7 @@ body.is-nav-open .topbar-burger { color: var(--ink); }
     justify-content: center;
     gap: 5px;
     align-items: center;
+    margin-right: -6px;
 }
 .topbar-burger span {
     display: block;
@@ -2431,7 +2432,11 @@ body.dev-mode .photo-pending::after {
    Override les background-image inline via [style*="..."] pour les sub-pages. */
 @media (max-width: 768px) {
     .hero-bg {
-        background-image: url('https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-domaine-hero.jpg') !important;
+        background-image: url('../img/photos/hero-mobile.jpg') !important;
+    }
+    .hero-bg[style*="chambre1.jpg"],
+    .article-hero-bg[style*="chambre1.jpg"] {
+        background-image: url('../img/photos/chambre1-mobile.jpg') !important;
     }
     .hero-bg[style*="chambre.webp"],
     .article-hero-bg[style*="chambre.webp"] {
