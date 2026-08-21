@@ -1682,29 +1682,6 @@ body.no-dev-mode .photo-pending::after {
     display: none;
 }
 
-/* Bandeau dev mode en bas à droite */
-.dev-banner {
-    position: fixed;
-    bottom: 16px;
-    right: 16px;
-    z-index: 9999;
-    background: var(--ink);
-    color: var(--paper);
-    padding: 10px 16px;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-weight: 600;
-    border-left: 2px solid var(--brass);
-    cursor: pointer;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    user-select: none;
-}
-.dev-banner:hover { background: var(--brass-deep); }
-body.no-dev-mode .dev-banner::before { content: "▶ "; }
-body:not(.no-dev-mode) .dev-banner::before { content: "● "; color: var(--brass); }
-
 /* ---------- LE CARNET — blog éditorial ---------- */
 .carnet-hero {
     padding: var(--s-9) 0 var(--s-7);
