@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1C1C1C">
 
-    <title>Domaine de la Verrerie · A Manor in Southern Burgundy</title>
-    <meta name="description" content="Domaine de la Verrerie. A nineteenth-century manor at the heart of Southern Burgundy. Bed and breakfast, weddings and seminars.">
+    <title>Domaine de la Verrerie · Guest Rooms in Épinac, Burgundy</title>
+    <meta name="description" content="Two guest rooms in Épinac, in a 19th-century manor at the heart of Southern Burgundy: Cul de Bouteille and Pierre de Silice.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 
+    <link rel="preload" as="image" href="https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-domaine-hero.jpg" fetchpriority="high">
+    <link rel="icon" href="../assets/logo/logo_verrerie_v12.webp" type="image/webp">
+
+    <!-- OpenGraph / social -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_GB">
-    <meta property="og:title" content="Domaine de la Verrerie · A Manor in Southern Burgundy">
-    <meta property="og:description" content="Born of fire, held by stone. A manor of the nineteenth century at the heart of Southern Burgundy.">
-    <meta property="og:image" content="https://enjoylife.b-cdn.net/Verrerie/hero.jpg">
+    <meta property="og:title" content="Domaine de la Verrerie · Guest Rooms in Épinac, Burgundy">
+    <meta property="og:description" content="Born of fire, held by stone. Two guest rooms in Épinac, in a 19th-century manor at the heart of Southern Burgundy.">
+    <meta property="og:image" content="https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-domaine-hero.jpg">
     <meta property="og:url" content="https://domainedelaverrerie.fr/en/">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -20,16 +30,9 @@
     <link rel="alternate" hreflang="en" href="https://domainedelaverrerie.fr/en/">
     <link rel="alternate" hreflang="x-default" href="https://domainedelaverrerie.fr/">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-
-    <link rel="preload" as="image" href="https://enjoylife.b-cdn.net/Verrerie/hero.jpg" fetchpriority="high">
-    <link rel="icon" href="../assets/logo/logo_verrerie_v12.webp" type="image/webp">
     <link rel="stylesheet" href="../assets/css/style.css">
 
+    <!-- Schema.org : LodgingBusiness + WebSite -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -38,28 +41,36 @@
           "@type": "LodgingBusiness",
           "@id": "https://domainedelaverrerie.fr/en/#lodging",
           "name": "Domaine de la Verrerie",
-          "description": "A nineteenth-century manor, the former residence of the directors of Épinac's glassworks. Bed and breakfast, weddings and seminars in Southern Burgundy.",
+          "description": "19th-century manor, former residence of the directors of Épinac's glassworks. Two guest rooms in Southern Burgundy.",
           "url": "https://domainedelaverrerie.fr/en/",
-          "inLanguage": "en",
           "telephone": "+33-7-83-34-95-54",
           "email": "contact@domainedelaverrerie.fr",
-          "image": "https://enjoylife.b-cdn.net/Verrerie/hero.jpg",
+          "image": "https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-domaine-hero.jpg",
+          "logo": "https://domainedelaverrerie.fr/assets/logo/logo_verrerie_v12.webp",
           "priceRange": "€€€",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "TODO_ADDRESS",
             "addressLocality": "Épinac",
             "postalCode": "71360",
             "addressRegion": "Bourgogne-Franche-Comté",
             "addressCountry": "FR"
           },
-          "geo": { "@type": "GeoCoordinates", "latitude": 46.9889, "longitude": 4.5103 }
+          "geo": { "@type": "GeoCoordinates", "latitude": 46.9889, "longitude": 4.5103 },
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=Domaine+de+la+Verrerie+Épinac",
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "9,400 m² enclosed park", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Breakfast included", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Fibre Wi-Fi", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Private parking", "value": true }
+          ]
         },
         {
           "@type": "WebSite",
+          "@id": "https://domainedelaverrerie.fr/en/#website",
           "url": "https://domainedelaverrerie.fr/en/",
           "name": "Domaine de la Verrerie",
-          "inLanguage": "en"
+          "inLanguage": "en-GB",
+          "publisher": { "@id": "https://domainedelaverrerie.fr/en/#lodging" }
         }
       ]
     }
@@ -102,12 +113,12 @@
                     <div class="topnav-panel-grid">
                         <ul class="topnav-panel-links cols-1">
                             <li><a href="/en/">Overview<small>The estate</small></a></li>
-                            <li><a href="/en/#lieu">The story<small>Folio II</small></a></li>
+                            <li><a href="/en/#lieu">The manor's story<small>Born of fire, in 1841</small></a></li>
                         </ul>
                         <div class="topnav-panel-feature">
                             <span class="eyebrow">Discover</span>
-                            <p>A nineteenth-century manor, <strong>born of fire</strong> and held by stone, at the heart of Southern Burgundy.</p>
-                            <span class="panel-meta">Established MDCCCXIX · Épinac</span>
+                            <p>A <strong>19th-century</strong> manor, born of fire and held by stone, at the heart of Southern Burgundy.</p>
+                            <span class="panel-meta">Since 1841 · Épinac</span>
                         </div>
                     </div>
                 </div>
@@ -118,41 +129,17 @@
                 <div class="topnav-panel">
                     <div class="topnav-panel-grid">
                         <ul class="topnav-panel-links cols-1">
-                            <li><a href="/en/stay/">Overview<small>Six manor rooms</small></a></li>
-                            <li><a href="/en/stay/#rooms">The rooms<small>Six metres of ceiling</small></a></li>
-                            <li><a href="/en/stay/#contact">Reserve a room<small>Reply within 24h</small></a></li>
+                            <li><a href="/en/stay/">Overview<small>Two guest rooms</small></a></li>
+                            <li><a href="/en/stay/#rooms">The rooms<small>Cul de Bouteille &amp; Pierre de Silice</small></a></li>
+                            <li><a href="/en/stay/#contact">Book a night<small>Reply within 24h</small></a></li>
                         </ul>
                         <div class="topnav-panel-feature">
-                            <span class="eyebrow">From</span>
-                            <p><strong>€180</strong> per night · gourmet breakfast included.</p>
-                            <span class="panel-meta">April – October · 6 rooms</span>
+                            <span class="eyebrow">Opening</span>
+                            <p>Two guest rooms · gourmet breakfast included.</p>
+                            <span class="panel-meta">On request · breakfast incl.</span>
                         </div>
                     </div>
                 </div>
-            </li>
-
-            <li class="topnav-item has-panel" data-page="mariages">
-                <a href="/en/weddings/" class="topnav-link">Weddings</a>
-                <div class="topnav-panel">
-                    <div class="topnav-panel-grid">
-                        <ul class="topnav-panel-links cols-1">
-                            <li><a href="/en/weddings/">The Book of Weddings<small>Overview</small></a></li>
-                            <li><a href="/en/weddings/#acts">Three acts<small>Aperitif, dinner, night</small></a></li>
-                            <li><a href="/en/weddings/#included">What is included<small>Six services</small></a></li>
-                            <li><a href="/en/weddings/#faq">Frequently asked<small>Capacity, catering, access</small></a></li>
-                            <li><a href="/en/weddings/#contact">Request the brochure<small>Tailored proposal</small></a></li>
-                        </ul>
-                        <div class="topnav-panel-feature">
-                            <span class="eyebrow">From</span>
-                            <p><strong>€4,500</strong> per weekend · full estate, up to 120 guests.</p>
-                            <span class="panel-meta">Season April – October</span>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li class="topnav-item" data-page="seminaires">
-                <a href="/en/seminars/" class="topnav-link">Seminars</a>
             </li>
 
         </ul>
@@ -160,7 +147,7 @@
 
     <div class="topbar-end">
         <a href="/" class="topbar-lang" hreflang="fr" lang="fr">FR</a>
-        <a href="/en/#contact" class="topbar-cta">Reserve</a>
+        <a href="/en/#contact" class="topbar-cta">Book</a>
         <button class="topbar-burger" aria-label="Open menu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
@@ -183,108 +170,99 @@
             <ul class="topnav-mobile-sub">
                 <li><a href="/en/stay/">Overview</a></li>
                 <li><a href="/en/stay/#rooms">The rooms</a></li>
-                <li><a href="/en/stay/#contact">Reserve</a></li>
+                <li><a href="/en/stay/#contact">Book</a></li>
             </ul>
-        </li>
-        <li class="topnav-mobile-item">
-            <button class="topnav-mobile-link" type="button">Weddings</button>
-            <ul class="topnav-mobile-sub">
-                <li><a href="/en/weddings/">The Book</a></li>
-                <li><a href="/en/weddings/#acts">Three acts</a></li>
-                <li><a href="/en/weddings/#included">What is included</a></li>
-                <li><a href="/en/weddings/#faq">FAQ</a></li>
-                <li><a href="/en/weddings/#contact">Request brochure</a></li>
-            </ul>
-        </li>
-        <li class="topnav-mobile-item">
-            <a href="/en/seminars/" class="topnav-mobile-link" style="text-decoration:none;color:inherit;">Seminars</a>
         </li>
     </ul>
     <div class="topnav-mobile-foot">
         <a href="/" class="topnav-mobile-lang">FR · Français</a>
-        <a href="/en/#contact" class="topnav-mobile-cta">Reserve</a>
+        <a href="/en/#contact" class="topnav-mobile-cta">Book</a>
     </div>
 </aside>
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-bg" role="img" aria-label="Domaine de la Verrerie · facade and grounds"></div>
+        <div class="hero-bg" role="img" aria-label="Domaine de la Verrerie · façade and park"></div>
         <div class="hero-overlay"></div>
 
         <div class="hero-mark">
-            <span class="eyebrow">Bed & Breakfast · Southern Burgundy</span>
+            <span class="eyebrow">Guest House · Épinac, Burgundy</span>
             <h1>Domaine<br><em>de la Verrerie</em></h1>
-            <span class="place">Saône-et-Loire · Since 1819</span>
+            <span class="hero-badge">Opening September 21, 2026</span>
+            <span class="place">Burgundy · Since 1841</span>
         </div>
 
         <div class="hero-foot">
-            <span class="left">No. 3814</span>
+            <span class="left">Breakfast included</span>
             <button class="scroll" type="button" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">Discover</button>
-            <span class="right">EN · FR</span>
+            <span class="right">FR · EN</span>
         </div>
     </section>
 
     <!-- INTRO -->
     <section class="intro shell" id="intro">
-        <span class="eyebrow">The estate</span>
-        <h2>A nineteenth-century family home, <em>open to those</em> who love slow days and Burgundy.</h2>
+        <span class="eyebrow">The Estate</span>
+        <h2>A <em>19th-century</em> manor comes back to life. Be among the very first to discover it.</h2>
+        <p style="max-width: 56ch; margin: var(--s-4) auto 0; color: var(--ink-soft); font-size: var(--t-18);">At the heart of Épinac, in Southern Burgundy, the estate opens its first two guest rooms on September 21, 2026.</p>
         <div class="intro-meta">
-            <span><strong>Year</strong> · 1819</span>
+            <span><strong>Year</strong> · 1841</span>
             <span><strong>Grounds</strong> · 9,400 m²</span>
-            <span><strong>Location</strong> · Southern Burgundy</span>
+            <span><strong>Location</strong> · Épinac, Burgundy</span>
         </div>
     </section>
 
-    <!-- PICKER -->
-    <section class="picker shell" id="picker">
-        <div class="picker-grid">
+    <!-- ROOMS · the flagship product, a full section per room -->
+    <section class="lieu" id="cul-de-bouteille-preview">
+        <div class="lieu-grid">
+            <div class="lieu-text">
+                <span class="eyebrow">Cul de Bouteille</span>
+                <h2>The deep green of hand-blown glass.</h2>
+                <p>A name inherited from the glassmakers themselves: "cul de bouteille", that dark, thick green of hand-blown bottles, imperfect and alive. Under a soaring ceiling, light glides across a Hungarian-point parquet floor to the original fireplace.</p>
+                <ul class="room-tags">
+                    <li>Private bathroom</li>
+                    <li>WC</li>
+                    <li>Double bed</li>
+                    <li>Park view</li>
+                    <li>Fibre Wi-Fi</li>
+                </ul>
+                <a class="lieu-link" href="/en/stay/#cul-de-bouteille">Discover Cul de Bouteille</a>
+            </div>
+            <div class="lieu-img-duo">
+                <div class="lieu-img-main accent-verte photo-pending" data-photo-ref="CDB-01" data-photo-desc="Cul de Bouteille room · bottle-green tones">
+                    <img src="../assets/img/photos/chambre1.jpg" srcset="../assets/img/photos/chambre1-mobile.jpg 800w, ../assets/img/photos/chambre1.jpg 1448w" sizes="(max-width: 1024px) 100vw, 45vw" alt="Cul de Bouteille room · Domaine de la Verrerie" loading="lazy" decoding="async" width="1448" height="1086">
+                    <span class="lieu-caption">Cul de Bouteille · original Hungarian-point parquet</span>
+                </div>
+                <div class="lieu-img-accent">
+                    <img src="../assets/img/photos/jardin-2-mobile.jpg" alt="The Domaine's park at golden hour" loading="lazy" decoding="async" width="700" height="495">
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <a class="tile" href="stay/">
-                <div class="tile-img-wrap">
-                    <img class="tile-img" src="https://enjoylife.b-cdn.net/Verrerie/chambre1.png" alt="Manor bedroom" loading="lazy" decoding="async" width="1600" height="2000">
-                    <span class="tile-num">I.</span>
+    <section class="lieu" style="background: var(--paper);" id="pierre-de-silice-preview">
+        <div class="lieu-grid lieu-grid-reverse">
+            <div class="lieu-img-duo">
+                <div class="lieu-img-main accent-silice photo-pending" data-photo-ref="PDS-01" data-photo-desc="Pierre de Silice room · sand and stone tones">
+                    <img src="../assets/img/photos/chambre1.jpg" srcset="../assets/img/photos/chambre1-mobile.jpg 800w, ../assets/img/photos/chambre1.jpg 1448w" sizes="(max-width: 1024px) 100vw, 45vw" alt="Pierre de Silice room · Domaine de la Verrerie" loading="lazy" decoding="async" width="1448" height="1086">
+                    <span class="lieu-caption">Pierre de Silice · morning light</span>
                 </div>
-                <div class="tile-meta">
-                    <span class="tile-eyebrow">A Night · Guest Rooms</span>
-                    <h3 class="tile-title">Sleep beneath six metres of ceiling.</h3>
-                    <div class="tile-row">
-                        <span class="tile-price">from <strong>€180</strong> · per night</span>
-                        <span class="tile-arrow">The Stay</span>
-                    </div>
+                <div class="lieu-img-accent">
+                    <img src="../assets/img/photos/orangerie-mobile.jpg" alt="Climbing roses on the Domaine's stone archway" loading="lazy" decoding="async" width="700" height="990">
                 </div>
-            </a>
-
-            <a class="tile" href="weddings/">
-                <div class="tile-img-wrap photo-pending" data-photo-ref="IMG-03" data-photo-desc="Cocktail in the park or wedding table dressed">
-                    <img class="tile-img" src="../assets/img/placeholders/mariage.webp" srcset="../assets/img/placeholders/mariage-mobile.webp 800w, ../assets/img/placeholders/mariage.webp 1600w" sizes="(max-width: 768px) 100vw, 33vw" alt="Wedding at Domaine de la Verrerie" loading="lazy" decoding="async" width="1600" height="2000">
-                    <span class="tile-num">II.</span>
-                </div>
-                <div class="tile-meta">
-                    <span class="tile-eyebrow">A Day · Weddings &amp; Receptions</span>
-                    <h3 class="tile-title">Host your own in a great house.</h3>
-                    <div class="tile-row">
-                        <span class="tile-price">from <strong>€4,500</strong> · per weekend</span>
-                        <span class="tile-arrow">The Book</span>
-                    </div>
-                </div>
-            </a>
-
-            <a class="tile" href="seminars/">
-                <div class="tile-img-wrap">
-                    <img class="tile-img" src="https://enjoylife.b-cdn.net/Verrerie/seminaire.jpg" alt="Seminar at Domaine de la Verrerie" loading="lazy" decoding="async" width="1600" height="2000">
-                    <span class="tile-num">III.</span>
-                    <span class="tile-badge">Opening 2028</span>
-                </div>
-                <div class="tile-meta">
-                    <span class="tile-eyebrow">A Project · Seminars &amp; Committees</span>
-                    <h3 class="tile-title">Far from the tinted glass of corporate hotels.</h3>
-                    <div class="tile-row">
-                        <span class="tile-price">from <strong>€85</strong> · per person</span>
-                        <span class="tile-arrow">Pre-book</span>
-                    </div>
-                </div>
-            </a>
-
+            </div>
+            <div class="lieu-text">
+                <span class="eyebrow">Pierre de Silice</span>
+                <h2>Silica, the base component of glass.</h2>
+                <p>Silica is the base component of glass, the raw material once heated in the glassworks' furnaces before becoming a bottle or flask. This room keeps its pale, mineral tone, under the same soaring ceiling as its neighbour, where morning light falls unobstructed.</p>
+                <ul class="room-tags">
+                    <li>Private bathroom</li>
+                    <li>WC</li>
+                    <li>Double bed</li>
+                    <li>Park view</li>
+                    <li>Fibre Wi-Fi</li>
+                </ul>
+                <a class="lieu-link" href="/en/stay/#pierre-de-silice">Discover Pierre de Silice</a>
+            </div>
         </div>
     </section>
 
@@ -292,17 +270,47 @@
     <section class="lieu" id="lieu">
         <div class="lieu-grid">
             <div class="lieu-text">
-                <span class="lieu-side">Folio II · The Place</span>
                 <span class="eyebrow">The Place</span>
-                <h2>A director's house, set above the fires.</h2>
-                <p>In the late eighteenth century, something more precious than vines was found beneath Épinac: coal. For one hundred and fifty years, the village became a factory town.</p>
-                <p>When the fires went out, the stone remained. Domaine de la Verrerie was not restored, it was <em>kept</em>. Herringbone parquet, period fireplaces, Rococo cast iron.</p>
+                <h2>A director's house, set above the furnaces.</h2>
+                <p>At the end of the 18<sup>th</sup> century, something more precious than vines was found beneath Épinac: coal. For a hundred and fifty years, the village became a factory town.</p>
+                <p>We bought this house as time had left it. Our project is simple: give it back, little by little, the charm of its past. The first guests will discover an estate in full renaissance, a restoration carried out <em>room by room</em>.</p>
+                <p>To begin, we are opening two rooms. A table d'hôte will follow, later, as the house comes back to life.</p>
                 <a class="lieu-link" href="#contact">Read the full story</a>
             </div>
             <div class="lieu-img">
-                <img src="https://enjoylife.b-cdn.net/Verrerie/halle.jpg" alt="Entrance hall · Domaine de la Verrerie" loading="lazy" decoding="async" width="1600" height="2000">
-                <span class="lieu-caption">The entrance hall · stone and light</span>
+                <img src="https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-jardin-arbre.jpg" srcset="../assets/img/photos/jardin-arbre-mobile.jpg 700w, https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-jardin-arbre.jpg 1591w" sizes="(max-width: 1024px) 100vw, 45vw" alt="Façade of Domaine de la Verrerie seen from the park" loading="lazy" decoding="async" width="1591" height="2250">
+                <span class="lieu-caption">The façade, seen from the park</span>
             </div>
+        </div>
+    </section>
+
+    <!-- GALLERY · a story in images, from the park to sunset -->
+    <section class="gallery" id="parc">
+        <div class="gallery-head">
+            <span class="eyebrow">The Domaine, in Pictures</span>
+            <h2>Grounds to wander, until the day's end.</h2>
+        </div>
+        <div class="gallery-strip">
+            <figure class="gallery-item">
+                <img src="https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-domaine-jardin.jpg" srcset="../assets/img/photos/domaine-jardin-mobile.jpg 800w, https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-domaine-jardin.jpg 2000w" sizes="(max-width: 480px) 74vw, 320px" alt="Entrance drive of Domaine de la Verrerie, between the stone pillars" loading="lazy" decoding="async" width="2000" height="1414">
+                <figcaption class="gallery-caption">The arrival, under the lime trees</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-jardin-3.jpg" srcset="../assets/img/photos/jardin-3-mobile.jpg 800w, https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-jardin-3.jpg 2000w" sizes="(max-width: 480px) 74vw, 320px" alt="Path through the park of Domaine de la Verrerie in late afternoon" loading="lazy" decoding="async" width="2000" height="1414">
+                <figcaption class="gallery-caption">The park, late afternoon</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-jardin-village.jpg" srcset="../assets/img/photos/jardin-village-mobile.jpg 800w, https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-jardin-village.jpg 2000w" sizes="(max-width: 480px) 74vw, 320px" alt="View over the rooftops of Épinac from the Domaine's park" loading="lazy" decoding="async" width="2000" height="1414">
+                <figcaption class="gallery-caption">Épinac, just next door</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-mongolfiere.jpg" srcset="../assets/img/photos/mongolfiere-mobile.jpg 700w, https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-mongolfiere.jpg 1591w" sizes="(max-width: 480px) 74vw, 320px" alt="Hot-air balloon over Burgundy, seen from the Domaine's park" loading="lazy" decoding="async" width="1591" height="2250">
+                <figcaption class="gallery-caption">Hot-air balloons over Burgundy</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <img src="https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-sunset.jpg" srcset="../assets/img/photos/sunset-mobile.jpg 800w, https://enjoylife.b-cdn.net/Verrerie/VRAI%20IMAGE/epinac-sunset.jpg 2000w" sizes="(max-width: 480px) 74vw, 320px" alt="Sunset over Domaine de la Verrerie" loading="lazy" decoding="async" width="2000" height="1414">
+                <figcaption class="gallery-caption">The day comes to an end</figcaption>
+            </figure>
         </div>
     </section>
 
@@ -311,34 +319,32 @@
         <div class="shell facts-grid">
             <div class="fact">
                 <span class="fact-num">9,400</span>
-                <span class="fact-label">m² walled grounds</span>
+                <span class="fact-label">m² of enclosed park</span>
             </div>
             <div class="fact">
-                <span class="fact-num">XIX<em>th</em></span>
+                <span class="fact-num">19<em>th</em></span>
                 <span class="fact-label">century origin</span>
             </div>
             <div class="fact">
-                <span class="fact-num">120</span>
-                <span class="fact-label">cocktail guests</span>
+                <span class="fact-num">2</span>
+                <span class="fact-label">guest rooms</span>
             </div>
             <div class="fact">
-                <span class="fact-num">30<em>′</em></span>
-                <span class="fact-label">from Beaune</span>
+                <span class="fact-num">1h20</span>
+                <span class="fact-label">from Paris by TGV</span>
             </div>
         </div>
     </section>
-
-    <!-- TESTIMONY -->
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
         <div class="shell contact-grid">
 
             <div class="contact-text">
-                <p class="contact-philosophy">Every request receives a personal reply within the day. We take time to listen to what would make you happy.</p>
-                <span class="eyebrow">Write to us</span>
-                <h2>One request, one personal reply.</h2>
-                <p>A stay, a wedding, a seminar to come. All requests receive a written, signed reply within twenty-four hours.</p>
+                <p class="contact-philosophy">"Every request gets a personal reply within the day. We take the time to listen to what would make your stay special."</p>
+                <span class="eyebrow">Write to Us</span>
+                <h2>A request, a personal reply.</h2>
+                <p>A night in one of our two rooms. Every request receives a written, signed reply within twenty-four hours.</p>
                 <ul class="coords">
                     <li>
                         <span class="coords-label">Phone</span>
@@ -350,7 +356,7 @@
                     </li>
                     <li>
                         <span class="coords-label">Address</span>
-                        <span>71360 Épinac · Burgundy, France</span>
+                        <span>71360 Épinac · Burgundy</span>
                     </li>
                 </ul>
             </div>
@@ -358,12 +364,10 @@
             <form class="form" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="f77a07e8-2576-4187-a68b-901b01ae6579">
                 <div class="form-field">
-                    <label for="lf-type">Type of request</label>
+                    <label for="lf-type">Request type</label>
                     <select id="lf-type" name="type" required>
-                        <option value="chambres">Stay · guest rooms</option>
-                        <option value="mariage">Wedding or reception</option>
-                        <option value="seminaire">Seminar (from 2028)</option>
-                        <option value="autre">Other</option>
+                        <option value="chambres">Night(s) in a guest room</option>
+                        <option value="autre">Other request</option>
                     </select>
                 </div>
                 <div class="form-row">
@@ -386,55 +390,61 @@
                         <input id="lf-date" type="date" name="date">
                     </div>
                 </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="lf-people">Number of guests</label>
+                        <input id="lf-people" type="number" name="people" min="1" placeholder="2">
+                    </div>
+                    <div class="form-field">
+                        <label for="lf-children">Including children</label>
+                        <input id="lf-children" type="number" name="children" min="0" placeholder="0">
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="lf-pets">Travelling with a pet?</label>
+                    <select id="lf-pets" name="pets">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </div>
                 <div class="form-field">
                     <label for="lf-message">Your message</label>
-                    <textarea id="lf-message" name="message" rows="3" placeholder="A few words about your project, dates, special requests…"></textarea>
+                    <textarea id="lf-message" name="message" rows="3" placeholder="A few words about your plans, your dates, your requests…"></textarea>
                 </div>
                 <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                 <button type="submit" class="btn">Send</button>
-                <p class="form-note">Your information stays strictly confidential.</p>
+                <p class="form-note">Your information remains strictly confidential.</p>
             </form>
         </div>
     </section>
 
-    <!-- COLOPHON -->
     </main>
 
+    <!-- COLOPHON -->
     <footer class="colophon">
         <div class="shell">
             <div class="colo-mark-wrap">
                 <span class="colo-mark">Domaine de la Verrerie</span>
-                <p>Historic manor of the Master Glassmakers. Bed and breakfast, weddings and seminars in Southern Burgundy.</p>
+                <p>Historic home of the Glass Masters. Guest rooms in Southern Burgundy.</p>
             </div>
             <div class="colo-col">
-                <h3 class="colo-h">Experiences</h3>
+                <h3 class="colo-h">Experience</h3>
                 <ul class="colo-list">
-                    <li><a href="stay/">A night</a></li>
-                    <li><a href="weddings/">A wedding</a></li>
-                    <li><a href="seminars/">A seminar</a></li>
+                    <li><a href="/en/stay/">A night's stay</a></li>
                 </ul>
             </div>
             <div class="colo-col">
-                <h3 class="colo-h">Write</h3>
+                <h3 class="colo-h">Write to Us</h3>
                 <ul class="colo-list">
                     <li>71360 Épinac, France</li>
                     <li><a href="tel:+33783349554">+33 (0)7 83 34 95 54</a></li>
                     <li><a href="mailto:contact@domainedelaverrerie.fr">contact@domainedelaverrerie.fr</a></li>
                 </ul>
             </div>
-            <div class="colo-col">
-                <h3 class="colo-h">Follow</h3>
-                <ul class="colo-list">
-                    <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-                    <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
-                </ul>
-            </div>
         </div>
         <div class="colo-bottom">
-            <span>© MMXXVI · Domaine de la Verrerie</span>
+            <span>© 2026 · Domaine de la Verrerie</span>
                         <span class="colo-legal">
-                <a href="/tournages/">Filming &amp; photoshoots</a>
-                <span class="colo-legal-sep">·</span>
                 <button type="button" data-modal-open="mentions">Legal Notice</button>
                 <span class="colo-legal-sep">·</span>
                 <button type="button" data-modal-open="confidentialite">Privacy</button>
@@ -443,6 +453,7 @@
             </span>
         </div>
     </footer>
+
     <script src="/assets/js/site.js" defer></script>
 
     <!-- ============== LEGAL MODAL ============== -->
@@ -465,14 +476,14 @@
 
                     <h3>Site Editor</h3>
                     <p><strong>Domaine de la Verrerie</strong><br>
-                    <span class="todo">[Legal name]</span><br>
+                    <span class="todo">[Legal name]</span> · <span class="todo">[Share capital]</span><br>
                     <span class="todo">[Full address]</span>, 71360 Épinac, France<br>
                     Registration: <span class="todo">[SIRET]</span> · VAT: <span class="todo">[VAT number]</span><br>
                     Phone: <a href="tel:+33783349554">+33 (0)7 83 34 95 54</a><br>
                     Email: <a href="mailto:contact@domainedelaverrerie.fr">contact@domainedelaverrerie.fr</a></p>
 
                     <h3>Publication Director</h3>
-                    <p><span class="todo">[Owner's name]</span></p>
+                    <p>Frédérique Fraud</p>
 
                     <h3>Hosting</h3>
                     <p>Source code hosted on <strong>GitHub, Inc.</strong><br>
@@ -485,17 +496,22 @@
                     <h3>Intellectual Property</h3>
                     <p>All content on this site (text, photographs, illustrations, logo, brand) is the exclusive property of Domaine de la Verrerie, except where otherwise stated. Any reproduction, representation, modification or exploitation, whether total or partial, is strictly prohibited without prior written authorisation.</p>
 
+                    <h3>Credits</h3>
+                    <p>Design &amp; development: <span class="todo">[Developer credit]</span><br>
+                    Visual identity: Domaine de la Verrerie Brand Guidelines 2026<br>
+                    Photography: <span class="todo">[Photographer credit]</span></p>
+
                     <p class="meta-line">Updated 1<sup>st</sup> May 2026</p>
                 </article>
 
                 <article class="modal-pane" data-pane="confidentialite" role="tabpanel">
-                    <span class="eyebrow">II · Privacy Policy</span>
+                    <span class="eyebrow">II · Personal Data</span>
                     <h2>Privacy Policy</h2>
 
-                    <p>Your data is entrusted to us, we take care of it. This page summarises what we collect, what it is used for, and how to exercise your rights, in strict compliance with GDPR.</p>
+                    <p>Your data is entrusted to us, we take care of it. This page summarises what we collect, what it is used for, and how to exercise your rights, in strict compliance with GDPR and French law.</p>
 
                     <h3>Data collected</h3>
-                    <p>We only collect data that you voluntarily provide through our contact or brochure request forms:</p>
+                    <p>We only collect data that you voluntarily provide through our contact or brochure request form:</p>
                     <ul>
                         <li>First and last name</li>
                         <li>Email address</li>
@@ -508,21 +524,21 @@
                     <h3>Purposes</h3>
                     <p>Your data is used solely to:</p>
                     <ul>
-                        <li>Respond to your reservation, quote or information request</li>
-                        <li>Send you the requested brochure</li>
+                        <li>Respond to your booking, quote or information request</li>
+                        <li>Send you the requested brochure, where applicable</li>
                         <li>Manage your stay or event</li>
                     </ul>
                     <p>Your data is <strong>never sold, shared or used for third-party commercial purposes</strong>.</p>
 
                     <h3>Retention</h3>
-                    <p>Unfulfilled requests are kept for 3 years from last contact. Data linked to an actual stay is kept for 10 years for accounting and tax reasons (legal obligation).</p>
+                    <p>Unfulfilled requests are kept for 3 years from the last contact. Data linked to an actual stay is kept for 10 years for accounting and tax reasons (legal obligation).</p>
 
                     <h3>Sub-processors</h3>
                     <p>The contact form is processed via <a href="https://web3forms.com" target="_blank" rel="noopener">Web3Forms</a>. <span class="todo">[processor GDPR status to confirm]</span></p>
 
                     <h3>Your rights</h3>
-                    <p>Under GDPR, you have rights to access, rectify, erase, restrict, object to and port your personal data. To exercise them, write to <a href="mailto:contact@domainedelaverrerie.fr">contact@domainedelaverrerie.fr</a> with proof of identity.</p>
-                    <p>You may also lodge a complaint with the French data protection authority, <a href="https://www.cnil.fr" target="_blank" rel="noopener">the CNIL</a>.</p>
+                    <p>Under GDPR, you have the right to access, rectify, erase, restrict, object to and port your personal data. To exercise these rights, write to <a href="mailto:contact@domainedelaverrerie.fr">contact@domainedelaverrerie.fr</a> with proof of identity.</p>
+                    <p>You may also lodge a complaint with the French data protection authority, the <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>, if you believe your rights are not respected.</p>
 
                     <h3>Cookies</h3>
                     <p>This site uses <strong>no advertising or tracking cookies</strong>. Only strictly necessary technical cookies may be set. No consent is required for these functional cookies.</p>
@@ -534,34 +550,29 @@
                     <span class="eyebrow">III · Stay Terms</span>
                     <h2>Stay Terms</h2>
 
-                    <p>Here are the conditions of a stay at Domaine de la Verrerie, be it a night, a wedding or a seminar. Five minutes to read. If anything is unclear, write to us, we will answer personally.</p>
+                    <p>Here are the terms that govern a stay at Domaine de la Verrerie. Five minutes to read. If any question remains, write to us, we will answer personally.</p>
 
                     <h3>Booking</h3>
-                    <p>All booking requests are made via the online form, by email or by telephone. A booking is only confirmed upon receipt of the deposit (<span class="todo">[to confirm: 30% for stays, 50% for weddings…]</span>).</p>
+                    <p>All booking requests are made via the online form, by email or by phone. A booking is only confirmed upon receipt of the deposit (<span class="todo">[to confirm: 30% of the stay, 50% for a wedding…]</span>).</p>
 
                     <h3>Rates</h3>
-                    <p>Displayed rates are in euros, all taxes included. They may vary by season and service. The applicable rate is the one shown on the signed quote.</p>
+                    <p>Displayed rates are in euros, all taxes included. They may vary by season and by service. The applicable rate is the one shown on the signed quote.</p>
 
                     <h3>Payment</h3>
-                    <p>The balance for stays is due on the day of arrival. The balance for events (weddings, seminars) is due no later than 30 days before the planned date. Accepted payment methods: bank transfer, credit card (terminal on site), cash (up to €1,000).</p>
+                    <p>The balance is due on the day of arrival. Accepted payment methods: bank transfer, credit card (terminal on site), cash (up to €1,000).</p>
 
                     <h3>Cancellation</h3>
-                    <p>Cancellation policies vary by service:</p>
-                    <ul>
-                        <li><strong>Bed &amp; breakfast stays</strong>: free cancellation up to 7 days prior. Beyond, the deposit is retained.</li>
-                        <li><strong>Wedding / private event</strong>: <span class="todo">[to confirm: tiered scale]</span></li>
-                        <li><strong>Seminar</strong>: <span class="todo">[to confirm]</span></li>
-                    </ul>
-                    <p>In cases of force majeure, conditions are reviewed flexibly.</p>
+                    <p>Free cancellation up to 7 days before arrival. Beyond that, the deposit is retained.</p>
+                    <p>In cases of force majeure (pandemic, bereavement, etc.), terms are reviewed with flexibility.</p>
 
                     <h3>Liability</h3>
-                    <p>Domaine de la Verrerie declines liability for theft, loss or damage to personal items brought by guests. Professional liability insurance covers damages caused by our activity.</p>
+                    <p>Domaine de la Verrerie declines all liability for theft, loss or damage to personal items brought by guests. Professional liability insurance covers damages caused by our activity.</p>
 
                     <h3>Mediation</h3>
                     <p>In case of dispute, the client may freely contact the consumer mediator: <span class="todo">[Approved mediator name and contact]</span>.</p>
 
                     <h3>Governing law</h3>
-                    <p>These T&amp;C are governed by French law. Any dispute falls under the exclusive jurisdiction of the courts of Mâcon, after attempted amicable resolution.</p>
+                    <p>These terms are governed by French law. Any dispute falls under the exclusive jurisdiction of the courts of Mâcon, after an attempted amicable resolution.</p>
 
                     <p class="meta-line">Updated 1<sup>st</sup> May 2026</p>
                 </article>
