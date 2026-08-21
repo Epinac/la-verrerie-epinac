@@ -1193,15 +1193,12 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
 }
 
 /* ---------- TARIFS — reprend le composant "facts" (bloc chiffre + libellé) ---------- */
-.price-extras {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--s-2) var(--s-6);
-    font-size: var(--t-14);
-    color: var(--ink-soft);
+.price-extras-grid {
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
 }
-.price-extras strong { color: var(--ink); font-weight: 600; }
+.price-extras-grid .fact-num { font-size: clamp(1.5rem, 2.5vw, 2.1rem); }
 .price-note {
     margin-top: var(--s-4);
     font-size: var(--t-14);
