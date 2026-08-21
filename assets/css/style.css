@@ -55,6 +55,16 @@ html.gate-bypass .gate { display: none; }
     letter-spacing: 0.03em;
     margin-bottom: var(--s-6);
 }
+.gate-place {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: var(--t-12);
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    font-weight: 500;
+    color: rgba(250, 247, 238, 0.6);
+    margin-bottom: var(--s-6);
+}
 .gate-contact {
     display: inline-block;
     font-family: 'Inter', sans-serif;
