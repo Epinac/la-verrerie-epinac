@@ -704,9 +704,9 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
 /* Teinte d'accent par chambre — en attendant une photo dédiée à chacune,
    ce lavis colore la même image pour distinguer visuellement les deux choix. */
 .tile-img-wrap.accent-verte::after,
-.tile-img-wrap.accent-bleue::after,
+.tile-img-wrap.accent-silice::after,
 .lieu-img.accent-verte::after,
-.lieu-img.accent-bleue::after {
+.lieu-img.accent-silice::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -715,7 +715,7 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     pointer-events: none;
 }
 .accent-verte::after { background: #33472F; opacity: 0.45; }
-.accent-bleue::after { background: #7FA0B0; opacity: 0.4; }
+.accent-silice::after { background: #C7BFA6; opacity: 0.4; }
 
 .tile-num {
     position: absolute;
@@ -1173,36 +1173,26 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     text-align: center;
     font-family: 'Inter', sans-serif;
 }
-/* ---------- TARIFS — tableau simple, sans carte ---------- */
-.price-table {
-    border-top: 1px solid var(--rule);
-    margin: var(--s-6) 0;
+/* ---------- ÉQUIPEMENTS CHAMBRE — badges, pas de texte courant ---------- */
+.room-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+    margin: var(--s-4) 0;
 }
-.price-row {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: var(--s-4);
-    align-items: baseline;
-    padding: var(--s-4) 0;
-    border-bottom: 1px solid var(--rule);
-}
-.price-row-name {
-    font-size: var(--t-16);
-    color: var(--ink);
-}
-.price-row-name small {
-    display: block;
-    font-size: var(--t-12);
-    color: var(--ink-soft);
-    margin-top: 2px;
-}
-.price-row-amount {
+.room-tags li {
     font-family: 'Inter', sans-serif;
-    font-size: var(--t-21);
-    font-weight: 600;
-    color: var(--ink);
-    white-space: nowrap;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
+    padding: 8px 14px;
 }
+
+/* ---------- TARIFS — reprend le composant "facts" (bloc chiffre + libellé) ---------- */
 .price-extras {
     list-style: none;
     display: flex;
