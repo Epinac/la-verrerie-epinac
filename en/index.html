@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Site en construction jusqu'au 21/09/2026 — supprimer cette ligne à l'ouverture -->
+    <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#1C1C1C">
 
@@ -66,6 +68,26 @@
     </script>
 </head>
 <body>
+<!-- GATE · "site under construction" window — DO NOT REMOVE before 2026-09-21 (see comment in style.css) -->
+<div class="gate" id="site-gate">
+    <div class="gate-mark">
+        <span class="eyebrow on-dark">Domaine de la Verrerie</span>
+        <h1>We're preparing<br><em>something.</em></h1>
+        <p>The site is getting a fresh look before our first two rooms open.</p>
+        <span class="gate-badge">Opening September 21, 2026</span>
+        <a class="gate-contact" href="mailto:contact@domainedelaverrerie.fr">contact@domainedelaverrerie.fr</a>
+    </div>
+</div>
+<script>
+(function () {
+    var params = new URLSearchParams(location.search);
+    var bypass = params.get('preview') === 'verrerie2026';
+    if (bypass) { try { sessionStorage.setItem('vr_preview', '1'); } catch (e) {} }
+    var stored = false;
+    try { stored = sessionStorage.getItem('vr_preview') === '1'; } catch (e) {}
+    if (bypass || stored) { document.documentElement.classList.add('gate-bypass'); }
+})();
+</script>
 
     <!-- TOPBAR -->
     <header class="topbar">
