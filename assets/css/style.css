@@ -235,8 +235,7 @@ body.is-scrolled .topnav-panel { top: 60px; }
 .topnav-panel-links a {
     display: block;
     padding: var(--s-3) 0;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: var(--t-21);
     color: var(--ink);
@@ -295,8 +294,7 @@ body.is-scrolled .topnav-panel { top: 60px; }
 }
 .topnav-panel-feature .eyebrow { margin-bottom: var(--s-3); display: block; }
 .topnav-panel-feature p {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-21);
     color: var(--ink);
     line-height: 1.4;
@@ -424,8 +422,7 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
         justify-content: space-between;
         align-items: center;
         padding: var(--s-4) 0;
-        font-family: 'Cormorant Garamond', serif;
-        font-style: italic;
+        font-family: 'Inter', sans-serif;
         font-size: var(--t-28);
         color: var(--ink);
         cursor: pointer;
@@ -458,8 +455,7 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     .topnav-mobile-sub li:first-child { padding-top: var(--s-1); }
     .topnav-mobile-sub li:last-child { padding-bottom: var(--s-4); }
     .topnav-mobile-sub a {
-        font-family: 'Cormorant Garamond', serif;
-        font-style: italic;
+        font-family: 'Inter', sans-serif;
         font-size: var(--t-21);
         color: var(--ink-soft);
     }
@@ -874,8 +870,7 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     align-items: baseline;
     gap: var(--s-2);
     margin-top: var(--s-4);
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-21);
     color: var(--ink);
     border-bottom: 1px solid var(--ink);
@@ -1104,8 +1099,7 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     border: none;
     border-bottom: 1px solid var(--rule);
     background: transparent;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-18);
     color: var(--ink);
     transition: border-color 300ms;
@@ -1131,8 +1125,7 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     border: none;
     border-bottom: 1px solid var(--ink);
     padding: var(--s-3) 0 var(--s-2);
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-21);
     font-weight: 500;
     cursor: pointer;
@@ -1156,8 +1149,7 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     font-size: var(--t-12);
     color: var(--ink-mute);
     text-align: center;
-    font-style: italic;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Inter', sans-serif;
 }
 .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 
@@ -1179,7 +1171,7 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     margin-bottom: var(--s-4);
 }
 .colo-mark + p {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-16);
     line-height: 1.5;
     max-width: 30ch;
@@ -1386,8 +1378,7 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
 .faq-list summary {
     cursor: pointer;
     list-style: none;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-21);
     color: var(--ink);
     display: flex;
@@ -1549,7 +1540,7 @@ body.is-modal-open { overflow: hidden; }
     margin: var(--s-5) 0 var(--s-2);
 }
 .modal-pane p {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-18);
     line-height: 1.6;
     color: var(--ink);
@@ -1561,7 +1552,7 @@ body.is-modal-open { overflow: hidden; }
     padding-left: var(--s-5);
 }
 .modal-pane li {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-18);
     line-height: 1.55;
     color: var(--ink);
@@ -1593,8 +1584,7 @@ body.is-modal-open { overflow: hidden; }
     gap: 10px;
     align-items: center;
     flex-wrap: wrap;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     text-transform: none;
     letter-spacing: 0;
@@ -1699,8 +1689,7 @@ body.no-dev-mode .photo-pending::after {
     max-width: 16ch;
 }
 .carnet-hero p {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-21);
     color: var(--ink-soft);
     line-height: 1.5;
@@ -1755,7 +1744,7 @@ body.no-dev-mode .photo-pending::after {
 }
 .carnet-card:hover h2 { color: var(--brass-deep); }
 .carnet-card .lede {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-18);
     line-height: 1.55;
     color: var(--ink-soft);
@@ -1862,7 +1851,7 @@ body.no-dev-mode .photo-pending::after {
     margin: var(--s-6) 0 var(--s-3);
 }
 .article-body p {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-21);
     line-height: 1.65;
     color: var(--ink);
@@ -1919,7 +1908,7 @@ body.no-dev-mode .photo-pending::after {
     padding-left: var(--s-5);
 }
 .article-list li {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-21);
     line-height: 1.65;
     color: var(--ink);
@@ -1970,8 +1959,7 @@ body.no-dev-mode .photo-pending::after {
     color: var(--paper);
     border-bottom: 1px solid var(--paper);
     padding-bottom: 4px;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-21);
     transition: color 300ms, border-color 300ms;
 }
@@ -2060,8 +2048,7 @@ body.no-dev-mode .photo-pending::after {
 }
 .distances-head .eyebrow { margin-bottom: var(--s-3); }
 .distances-head p {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
     font-size: var(--t-18);
     color: var(--ink-soft);
     max-width: 60ch;
