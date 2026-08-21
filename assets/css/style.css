@@ -11,7 +11,7 @@
     --paper-2:    #F2EDE0;     /* alt stone */
     --ink:        #1C1C1C;     /* texte principal */
     --ink-soft:   #4A4A4A;
-    --ink-mute:   #6E6D66;     /* WCAG AA : 5.0:1 sur paper */
+    --ink-mute:   #55534C;     /* renforcé 2026-07-15 — WCAG AA : ~7.6:1 sur paper (l'ancien 4.85:1 était trop juste sur les petits libellés) */
     --forest:     #1C2622;     /* dark accent */
     --brass:      #B59661;     /* accent décoratif (jamais texte sur fond clair) */
     --brass-deep: #6B5A2E;     /* accent text sur fond clair (WCAG AA: 6.7:1) */
