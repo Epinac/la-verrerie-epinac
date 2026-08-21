@@ -4,6 +4,68 @@
    Discipline : 8pt grid, type scale modulaire, restraint.
    ========================================================= */
 
+/* ---------- GATE — fenêtre "site en construction" ----------
+   Demande explicite de l'utilisateur (2026-08-21) : NE PAS SUPPRIMER
+   avant le 21 septembre 2026. On travaille en public jusqu'à l'ouverture ;
+   ce voile masque le site aux visiteurs pendant ce temps.
+   Pour désactiver le jour J : supprimer ce bloc + le bloc .gate dans le
+   <body> de index.html et sejour/index.html + les <meta name="robots"
+   content="noindex"> ajoutés dans les deux <head>. */
+html:not(.gate-bypass) { overflow: hidden; }
+.gate {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--gutter, 24px);
+    background: linear-gradient(180deg, #1C2620 0%, #12180F 100%);
+}
+html.gate-bypass .gate { display: none; }
+.gate-mark { max-width: 46ch; }
+.gate-mark .eyebrow { color: var(--brass); margin-bottom: var(--s-4); }
+.gate-mark h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    line-height: 1.08;
+    color: var(--paper);
+    letter-spacing: -0.02em;
+    margin-bottom: var(--s-5);
+}
+.gate-mark h1 em { color: var(--brass); font-style: italic; }
+.gate-mark p {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--t-18);
+    color: rgba(250, 247, 238, 0.75);
+    line-height: 1.6;
+    margin-bottom: var(--s-6);
+}
+.gate-badge {
+    display: inline-block;
+    padding: 10px 22px;
+    background: var(--brass);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin-bottom: var(--s-6);
+}
+.gate-contact {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: var(--t-14);
+    color: rgba(250, 247, 238, 0.55);
+    border-bottom: 1px solid rgba(250, 247, 238, 0.25);
+    padding-bottom: 2px;
+    transition: color 200ms, border-color 200ms;
+}
+.gate-contact:hover { color: var(--brass); border-color: var(--brass); }
+
 /* ---------- DESIGN TOKENS ---------- */
 :root {
     /* Couleurs — palette restreinte (paper + ink + 1 accent) */
