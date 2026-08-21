@@ -5,7 +5,7 @@
   <!-- ===== HOMEPAGE ===== -->
   <url>
     <loc>https://domainedelaverrerie.fr/</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://domainedelaverrerie.fr/"/>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://domainedelaverrerie.fr/en/</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://domainedelaverrerie.fr/"/>
@@ -25,7 +25,7 @@
   <!-- ===== STAY / SEJOUR ===== -->
   <url>
     <loc>https://domainedelaverrerie.fr/sejour/</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://domainedelaverrerie.fr/sejour/"/>
@@ -33,125 +33,18 @@
   </url>
   <url>
     <loc>https://domainedelaverrerie.fr/en/stay/</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://domainedelaverrerie.fr/sejour/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://domainedelaverrerie.fr/en/stay/"/>
   </url>
 
-  <!-- ===== WEDDINGS / MARIAGES ===== -->
-  <url>
-    <loc>https://domainedelaverrerie.fr/mariages/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://domainedelaverrerie.fr/mariages/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://domainedelaverrerie.fr/en/weddings/"/>
-  </url>
-  <url>
-    <loc>https://domainedelaverrerie.fr/en/weddings/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://domainedelaverrerie.fr/mariages/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://domainedelaverrerie.fr/en/weddings/"/>
-  </url>
-
-  <!-- ===== TOURNAGES / FILMING & PHOTOSHOOTS ===== -->
-  <url>
-    <loc>https://domainedelaverrerie.fr/tournages/</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- ===== SEMINARS / SEMINAIRES ===== -->
-  <url>
-    <loc>https://domainedelaverrerie.fr/seminaires/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://domainedelaverrerie.fr/seminaires/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://domainedelaverrerie.fr/en/seminars/"/>
-  </url>
-  <url>
-    <loc>https://domainedelaverrerie.fr/en/seminars/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://domainedelaverrerie.fr/seminaires/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://domainedelaverrerie.fr/en/seminars/"/>
-  </url>
-
-  <!-- ===== AUX ALENTOURS (hub tourisme + 5 sous-pages topiques) ===== -->
-  <url>
-    <loc>https://domainedelaverrerie.fr/aux-alentours/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://domainedelaverrerie.fr/aux-alentours/chateaux/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://domainedelaverrerie.fr/aux-alentours/villages/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://domainedelaverrerie.fr/aux-alentours/nature/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://domainedelaverrerie.fr/aux-alentours/activites/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://domainedelaverrerie.fr/aux-alentours/tables-et-marches/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://domainedelaverrerie.fr/aux-alentours/le-feu/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ===== LE CARNET (blog SEO) ===== -->
-  <url>
-    <loc>https://domainedelaverrerie.fr/carnet/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://domainedelaverrerie.fr/carnet/grands-crus-bourgogne/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://domainedelaverrerie.fr/carnet/visiter-autun/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://domainedelaverrerie.fr/carnet/week-end-saone-et-loire/</loc>
-    <lastmod>2026-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!--
+    Rubriques mises de côté le temps de l'ouverture des chambres (contenu conservé
+    sur le site, juste retiré du plan du site / de la mise en avant SEO) :
+    mariages, séminaires, tournages, aux-alentours, carnet.
+    À réintégrer ici au fur et à mesure de la remise en avant de chaque rubrique.
+  -->
 
 </urlset>
