@@ -202,6 +202,45 @@
         });
     }
 
+    /* ---- 8. Envoi des formulaires (Web3Forms) sans quitter le site ---- */
+    function setupWeb3Forms() {
+        var forms = document.querySelectorAll('form[action="https://api.web3forms.com/submit"]');
+        forms.forEach(function (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var btn = form.querySelector('button[type="submit"]');
+                var originalLabel = btn ? btn.textContent : '';
+                if (btn) {
+                    btn.disabled = true;
+                    btn.textContent = 'Envoi en cours…';
+                }
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                })
+                    .then(function (response) { return response.json(); })
+                    .then(function (data) {
+                        if (data && data.success) {
+                            var wrap = document.createElement('div');
+                            wrap.className = 'form-success';
+                            wrap.innerHTML = '<p><strong>Merci, votre message est bien parti.</strong></p><p>Nous vous répondons personnellement, très vite.</p>';
+                            form.replaceWith(wrap);
+                        } else {
+                            throw new Error('web3forms error');
+                        }
+                    })
+                    .catch(function () {
+                        if (btn) {
+                            btn.disabled = false;
+                            btn.textContent = originalLabel;
+                        }
+                        window.alert('Un souci est survenu lors de l\'envoi. Réessayez, ou écrivez-nous directement par email.');
+                    });
+            });
+        });
+    }
+
     /* ---- Init ---- */
     function init() {
         setupScrollState();
@@ -211,6 +250,7 @@
         setupMobileLinkClose();
         setupReveals();
         setupLegalModal();
+        setupWeb3Forms();
     }
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
