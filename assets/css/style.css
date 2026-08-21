@@ -26,7 +26,7 @@ html:not(.gate-bypass) { overflow: hidden; }
 html.gate-bypass .gate { display: none; }
 .gate-mark { max-width: 46ch; }
 .gate-mark .eyebrow { color: var(--brass); margin-bottom: var(--s-4); }
-.gate-mark h1 {
+.gate-mark .gate-title {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
@@ -36,7 +36,7 @@ html.gate-bypass .gate { display: none; }
     letter-spacing: -0.02em;
     margin-bottom: var(--s-5);
 }
-.gate-mark h1 em { color: var(--brass); font-style: italic; }
+.gate-mark .gate-title em { color: var(--brass); font-style: italic; }
 .gate-mark p {
     font-family: 'Inter', sans-serif;
     font-size: var(--t-18);
