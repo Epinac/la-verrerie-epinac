@@ -700,6 +700,23 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     will-change: transform;
 }
 .tile:hover .tile-img { transform: scale(1.05); }
+
+/* Teinte d'accent par chambre — en attendant une photo dédiée à chacune,
+   ce lavis colore la même image pour distinguer visuellement les deux choix. */
+.tile-img-wrap.accent-verte::after,
+.tile-img-wrap.accent-bleue::after,
+.lieu-img.accent-verte::after,
+.lieu-img.accent-bleue::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    mix-blend-mode: color;
+    pointer-events: none;
+}
+.accent-verte::after { background: #33472F; opacity: 0.45; }
+.accent-bleue::after { background: #7FA0B0; opacity: 0.4; }
+
 .tile-num {
     position: absolute;
     top: var(--s-4);
@@ -749,6 +766,13 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     color: var(--ink);
     grid-column: 1 / -1;
     letter-spacing: -0.005em;
+}
+.tile-desc {
+    grid-column: 1 / -1;
+    font-size: var(--t-14);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin-top: var(--s-1);
 }
 .tile-row {
     grid-column: 1 / -1;
