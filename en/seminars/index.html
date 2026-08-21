@@ -253,8 +253,9 @@
                 </ul>
             </div>
 
-            <form class="form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                <input type="hidden" name="_subject" value="Seminar pre-booking — Domaine de la Verrerie">
+            <form class="form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="f77a07e8-2576-4187-a68b-901b01ae6579">
+                <input type="hidden" name="subject" value="Seminar pre-booking — Domaine de la Verrerie">
                 <input type="hidden" name="type" value="seminar">
 
                 <div class="form-row">
@@ -297,7 +298,7 @@
                     <label for="se-message">Tell us about your project</label>
                     <textarea id="se-message" name="message" rows="3" placeholder="Preferred period, objectives of the meeting, specific constraints…"></textarea>
                 </div>
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
+                <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                 <button type="submit" class="btn">Place my committee</button>
                 <p class="form-note">Reply within 24 hours. No data resold.</p>
             </form>
@@ -421,7 +422,7 @@
                     <p>Unfulfilled requests are kept for 3 years from last contact. Data linked to an actual stay is kept for 10 years for accounting and tax reasons (legal obligation).</p>
 
                     <h3>Sub-processors</h3>
-                    <p>The contact form is processed via <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> (United States, GDPR-compliant via Standard Contractual Clauses).</p>
+                    <p>The contact form is processed via <a href="https://web3forms.com" target="_blank" rel="noopener">Web3Forms</a>. <span class="todo">[processor GDPR status to confirm]</span></p>
 
                     <h3>Your rights</h3>
                     <p>Under GDPR, you have rights to access, rectify, erase, restrict, object to and port your personal data. To exercise them, write to <a href="mailto:contact@domainedelaverrerie.fr">contact@domainedelaverrerie.fr</a> with proof of identity.</p>

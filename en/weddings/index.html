@@ -292,8 +292,9 @@
                 <h2>From <em>€4,500</em><br>per weekend reservation.</h2>
                 <p>The final rate depends on the season, the number of guests and the chosen services. Our complete brochure details every option and our recommended partners.</p>
             </div>
-            <form class="brochure-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                <input type="hidden" name="_subject" value="Wedding brochure request">
+            <form class="brochure-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="f77a07e8-2576-4187-a68b-901b01ae6579">
+                <input type="hidden" name="subject" value="Wedding brochure request">
                 <input type="hidden" name="type" value="wedding-brochure">
                 <span class="eyebrow on-dark">Request the brochure</span>
                 <div class="form-row">
@@ -306,7 +307,7 @@
                         <input id="b-email" type="email" name="email" required autocomplete="email">
                     </div>
                 </div>
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
+                <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                 <button type="submit" class="btn btn-on-dark">Receive the brochure</button>
             </form>
         </div>
@@ -366,8 +367,9 @@
                 </ul>
             </div>
 
-            <form class="form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                <input type="hidden" name="_subject" value="Wedding enquiry — Domaine de la Verrerie">
+            <form class="form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="f77a07e8-2576-4187-a68b-901b01ae6579">
+                <input type="hidden" name="subject" value="Wedding enquiry — Domaine de la Verrerie">
                 <input type="hidden" name="type" value="wedding">
 
                 <div class="form-row">
@@ -410,7 +412,7 @@
                     <label for="m-message">Tell us about your project</label>
                     <textarea id="m-message" name="message" rows="3" placeholder="Civil or religious ceremony, your vision, special requests…"></textarea>
                 </div>
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
+                <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                 <button type="submit" class="btn">Send my enquiry</button>
                 <p class="form-note">Reply within 24 hours.</p>
             </form>
@@ -534,7 +536,7 @@
                     <p>Unfulfilled requests are kept for 3 years from last contact. Data linked to an actual stay is kept for 10 years for accounting and tax reasons (legal obligation).</p>
 
                     <h3>Sub-processors</h3>
-                    <p>The contact form is processed via <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> (United States, GDPR-compliant via Standard Contractual Clauses).</p>
+                    <p>The contact form is processed via <a href="https://web3forms.com" target="_blank" rel="noopener">Web3Forms</a>. <span class="todo">[processor GDPR status to confirm]</span></p>
 
                     <h3>Your rights</h3>
                     <p>Under GDPR, you have rights to access, rectify, erase, restrict, object to and port your personal data. To exercise them, write to <a href="mailto:contact@domainedelaverrerie.fr">contact@domainedelaverrerie.fr</a> with proof of identity.</p>

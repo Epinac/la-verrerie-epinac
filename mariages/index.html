@@ -423,8 +423,9 @@
                 <h2>À partir de <em>4 500 €</em><br>la privatisation week-end.</h2>
                 <p>Le tarif définitif dépend de la saison, du nombre d'invités et des prestations sélectionnées. Notre brochure complète détaille toutes les options et nos prestataires recommandés.</p>
             </div>
-            <form class="brochure-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                <input type="hidden" name="_subject" value="Demande brochure mariage">
+            <form class="brochure-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="f77a07e8-2576-4187-a68b-901b01ae6579">
+                <input type="hidden" name="subject" value="Demande brochure mariage">
                 <input type="hidden" name="type" value="brochure-mariage">
                 <span class="eyebrow on-dark">Recevoir la brochure</span>
                 <div class="form-row">
@@ -437,7 +438,7 @@
                         <input id="b-email" type="email" name="email" required autocomplete="email">
                     </div>
                 </div>
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
+                <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                 <button type="submit" class="btn btn-on-dark">Recevoir la brochure</button>
             </form>
         </div>
@@ -501,8 +502,9 @@
                 </ul>
             </div>
 
-            <form class="form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                <input type="hidden" name="_subject" value="Demande mariage — Domaine de la Verrerie">
+            <form class="form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="f77a07e8-2576-4187-a68b-901b01ae6579">
+                <input type="hidden" name="subject" value="Demande mariage — Domaine de la Verrerie">
                 <input type="hidden" name="type" value="mariage">
 
                 <div class="form-row">
@@ -545,7 +547,7 @@
                     <label for="m-message">Votre projet en quelques mots</label>
                     <textarea id="m-message" name="message" rows="3" placeholder="Cérémonie civile ou religieuse, vision générale, demandes particulières…"></textarea>
                 </div>
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
+                <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp-field">
                 <button type="submit" class="btn">Envoyer ma demande</button>
                 <p class="form-note">Réponse personnelle sous 24 heures.</p>
             </form>
@@ -675,7 +677,7 @@
                     <p>Les demandes non concrétisées sont conservées 3 ans à compter du dernier contact. Les données liées à un séjour effectif sont conservées 10 ans pour des raisons comptables et fiscales (obligation légale).</p>
 
                     <h3>Sous-traitants</h3>
-                    <p>Le formulaire de contact est traité via <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> (États-Unis, certifié RGPD via clauses contractuelles types).</p>
+                    <p>Le formulaire de contact est traité via <a href="https://web3forms.com" target="_blank" rel="noopener">Web3Forms</a>. <span class="todo">[statut RGPD du sous-traitant à vérifier]</span></p>
 
                     <h3>Vos droits</h3>
                     <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité de vos données. Pour les exercer, écrivez à <a href="mailto:contact@domainedelaverrerie.fr">contact@domainedelaverrerie.fr</a> en justifiant de votre identité.</p>
