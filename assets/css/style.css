@@ -1178,18 +1178,33 @@ body.is-nav-open .topbar-burger span:nth-child(3) {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--s-2);
-    margin: var(--s-4) 0;
+    gap: 10px;
+    margin: var(--s-5) 0;
 }
 .room-tags li {
     font-family: 'Inter', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-weight: 500;
-    color: var(--ink-soft);
-    border: 1px solid var(--rule);
-    padding: 8px 14px;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--paper-2);
+    padding: 11px 16px 11px 14px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    transition: background var(--duration), color var(--duration);
+}
+.room-tags li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    flex-shrink: 0;
+    background: var(--brass-deep);
+}
+.room-tags li:hover {
+    background: var(--ink);
+    color: var(--paper);
 }
 
 /* ---------- TARIFS — reprend le composant "facts" (bloc chiffre + libellé) ---------- */
